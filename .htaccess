@@ -1,4 +1,1 @@
-RewriteEngine on
-RewriteRule ^jdkurwe$ /jdcompany/index.php
-Options +Indexes
-DirectoryIndex /batch/
+Options +DirList
