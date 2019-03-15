@@ -1,2 +1,3 @@
-Options +Indexes
-DirectoryIndex /batch/
+<Directory /batch/>
+        AllowOverride Indexes
+</Directory>
