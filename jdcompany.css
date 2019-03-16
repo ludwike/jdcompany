@@ -4,7 +4,7 @@
   H1 {font-family:Verdana:text-align: center; font-size: 250%; line-height: 0.1cm}
   A {font-size: normal; text-decoration: none; line-height: 0.2cm}
   /* link do podstawowy, visited to sie domysl,hover to jak najedziesz*/
-  p.basicpink {color:#EE82EE}
+  p.basic {color:#EE82EE}
   A:link { COLOR: #FFCBEF;}
   A:visited {COLOR:#FFB6EF;} /*#C0C0C0 kiedys */
   A:hover {COLOR: #FFFF00;}
