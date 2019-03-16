@@ -1,26 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl-PL">
+<title>jd</title>
 <head>
-  <style type="text/css">
-  <!--
-  footer {fantasy;color:gold;position:absolute;bottom:0;/*taki center*/width:99%;text-align: center;}
-  H1 {font-family:Verdana:text-align: center; font-size: 250%; line-height: 0.1cm}
-  body {font-family:Verdana;background-color:black; text-align: center; color: white;}
-  A {font-size: normal; text-decoration: none}
-  A:link { COLOR: white;}
-  A:visited {COLOR:#C0C0C0;}
-  A:hover {COLOR: #FFFF00;}
-  p.stopka {color:#FF66CC;font-size: smaller}
-  -->
-  </style>
+<meta charset="UTF-8">
+<style type="text/css">
+<!--
+footer {color:gold;position:absolute;bottom:0;/*taki center*/width:99%;text-align: center;}
+body {background-color:black; text-align: center; color: white;}
+/* link do podstawowy, visited to sie domysl,hover to jak najedziesz*/
+A {line-height: 130%; font-size: larger; text}
+A:link { COLOR: white; text-decoration: none;}
+A:visited {COLOR:#C0C0C0;}
+A:hover {COLOR: #FFFF00;}
+H1 {font-size: 30}
+-->
+</style>
 </head>
 <body>
-<h1>Hello!</h1>
-
-<footer>
-<p class="stopka">Autor:<br>Adam "Ludwike" Majewski</p>
-	 <!-- 	<address>(adam9871337@gmail.com)</address> -->
-    <p class="stopka" style="color:#FF0000">JD Company.</p>
-	</footer>
+<h1 style;>Hello!</h1>
 </body>
 </html>
