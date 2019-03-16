@@ -18,5 +18,10 @@ H1 {font-size: 30}
 </head>
 <body>
 <h1 style;>Hello!</h1>
+<footer>
+<p class="stopka">Autor:<br>Adam "Ludwike" Majewski</p>
+	 <!-- 	<address>(adam9871337@gmail.com)</address> -->
+    <p class="stopka" style="color:#FF0000">JD Company.</p>
+	</footer>
 </body>
 </html>
