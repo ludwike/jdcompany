@@ -8,4 +8,7 @@
   A:hover {COLOR: #FFFF00 !important;}
   footer {color:gold;position:absolute;bottom:0;/*taki center*/width:99%;text-align: center;}
   .stopka {line-height: 0.2cm;margin-bottom:0;color:#FF66CC !important;font-size: smaller}
-  .gradient1 {background: linear-gradient(to right, red, orange, yellow, lime, blue, purple, fuchsia)}
+  .gradient {background: linear-gradient(to right, red, orange, yellow, lime, blue, purple, fuchsia)}
+  #pokaz {display: none;}
+  #pokaz:target {display: block;}
+  #ukryj:target #pokaz {display: none;
