@@ -5,8 +5,8 @@
     <meta charset="utf-8">
 <style type="text/css">
 <!--
-/*  https://thinfi.com/8q7v 
-background-repeat:repeat lub repeat-x potwarza tylko poziomo lub repeat-y tylko pionowo */
+/*  https://thinfi.com/8q7v
+background-repeat:repeat lub no-repeat lub repeat-x potwarza tylko poziomo lub repeat-y tylko pionowo */
 /* background-attachment: reagowanie grafiki na scrollowanie np. scroll to normalnie lub
 fixed nieruchome lub local " tło będzie nieruchome w stosunku do elementu, dla którego zostało
 zdefiniowane (jeśli będzie się przewijać, to razem z nim)." */
