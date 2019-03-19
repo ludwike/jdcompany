@@ -12,7 +12,4 @@
   #pokaz {display: none;}
   #pokaz:target {display: block;}
   #ukryj:target #pokaz {display: none;}
-@font-face {
-  font-family: shesmiles;
-  src: url(shesmiles.otf);
-}
+@font-face {font-family: shesmiles; src: url(shesmiles.otf);}
