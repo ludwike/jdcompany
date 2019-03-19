@@ -4,6 +4,21 @@
     <meta charset="utf-8">
 <style type="text/css">
 <!--
+/* background-repeat:repeat lub repeat-x potwarza tylko poziomo lub repeat-y tylko pionowo */
+/* background-attachment: reagowanie grafiki na scrollowanie np. scroll to normalnie lub
+fixed nieruchome lub local " tło będzie nieruchome w stosunku do elementu, dla którego zostało
+zdefiniowane (jeśli będzie się przewijać, to razem z nim)." */
+/* pozycja grafiki czyli background-positio: np. center – wyśrodkowanie grafiki,
+left – grafika po lewej stronie strony,
+right – grafika po prawej,
+top – grafika u góry,
+bottom – grafika u dołu,
+przy użyciu dwóch wartości:
+left top – grafika w lewym górnym rogu strony (domyślne),
+left bottom – grafika z lewej na dole,
+right top – grafika u góry po prawej,
+right bottom – grafika u dołu po prawej.
+no i selektor { background-color: none; }*/
 body {background-repeat:no-repeat; background-image:url('https://ludwike.github.io/jdcompany/css/tloikolor400x400.gif');}
 p {background-position: center;background-repeat: no-repeat; background-image: url('https://ludwike.github.io/jdcompany/css/tloikolor20x20');}
 
