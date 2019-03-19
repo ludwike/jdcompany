@@ -1,5 +1,5 @@
   body {font-family:Verdana;background-color:black; text-align: center; color: white;}
-  H1 {font-family:Splatch;text-align: center; font-size: 250%; line-height: 0.1cm}
+  H1 {font-family:Verdana;text-align: center; font-size: 250%; line-height: 0.1cm}
   A {font-size: normal; text-decoration: none; line-height: 0.2cm}
   /* link do podstawowy, visited to sie domysl,hover to jak najedziesz*/
   p.basic {color:#EE82EE}
@@ -13,6 +13,6 @@
   #pokaz:target {display: block;}
   #ukryj:target #pokaz {display: none;}
 @font-face {
-  font-family: Hands;
-  src: url(Splatch.ttf);
+  font-family: shesmiles;
+  src: url(shesmiles.otf);
 }
