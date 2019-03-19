@@ -12,3 +12,4 @@
   #pokaz {display: none;}
   #pokaz:target {display: block;}
   #ukryj:target #pokaz {display: none;
+@font-face {font-family: Charlotte;src: url(jd.tff);}
