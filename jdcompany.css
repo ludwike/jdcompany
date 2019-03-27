@@ -12,4 +12,4 @@
   #pokaz {display: none;}
   #pokaz:target {display: block;}
   #ukryj:target #pokaz {display: none;}
-    @font-face {font-family: FRIZ; src: url(frizquadra.ttf);}h
+    @font-face {font-family: FRIZ; src: url(frizquadra.ttf);}
