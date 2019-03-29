@@ -1,0 +1,42 @@
+* {
+  --ikonka:url("lolicon2.png");
+  --ciemnoszary:#121212;
+  --zloty:#c9aa71;}
+
+@font-face {font-family: friz; src: url(frizquadra.ttf)}
+body {
+  margin:0;
+  font-family: friz;
+  color:gold;
+  font-size:15px;}
+
+#s1 div{
+  height: 50px;
+  width:100%;
+  background-color: var(--ciemnoszary);
+  font-family: friz;
+  border-bottom: 2px solid #262626;
+  color: var(--zloty);}
+
+#s1 div a{
+  background:var(--ikonka) no-repeat 10px;
+  height: 50px;
+  width: 50px;
+  display: block;
+  float:left;}
+
+#s1 div ul{
+  display: block;
+  list-style-type: disc;
+  margin: 0;
+  padding-left: 40px;}
+
+#s1 div ul li{
+float:left;
+padding:15px;
+list-style-type: none;}
+
+#s2 div {
+  height: 1000px;
+  width: 100%;
+  background-color: black}
