@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Formularz danych osobowych</title>
 	<meta charset="utf-8">
 </head>
 <body>
-<form action="mailto:test@zszlw.edu.pl" method="post">
-Podaj imię: <input type="text" name="imie">
-<button onclick="Witaj()">Kliknij!</button>
+<p>Wypełnij formularz:</p>
+<form id="dane" action="mailto:test@zszlw.edu.pl" method="post">
+Imię: <input type="text" name="imie">
+Nazwisko: <input type="text" name="nazwisko">
+Miejscowość: <input type="text" name="miejscowosc">
+<button name="sprawdź" onclick="Sprawdz()">Sprawdź!</button>
 </form>
 <script type="text/javascript">
 <!--
-function Witaj()
+function Sprawdz()
 {
-	var jakiesimie = document.forms[0].imie.value;
-	alert('Witaj, ' + jakiesimie + '!');
+	l = document.getElementById('dane');
+	for (var i=0;i<l.length-1;i++)
+	{
+		document.write(l.elements[i].name + ': ' + l.elements[i].value + '<br>');
+	}
+	document.write('<input type=\"submit\">' + '<input type="reset" value="Przeslij to..">');
 }
 -->
 </script>
