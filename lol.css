@@ -1,13 +1,12 @@
 * {
-  --ikonka:url("lolicon2.png");
+  --ikonka:url("lol/lolicon2.png");
   --ciemnoszary:#121212;
   --zloty:#c9aa71;}
 
-@font-face {font-family: friz; src: url(frizquadra.ttf)}
-@font-face {font-family: penura; src: url(penura.otf)}
+@font-face {font-family: friz; src: url(lol/frizquadra.ttf)}
+@font-face {font-family: penura; src: url(lol/penura.otf)}
 body {
   margin:0;
-  font-family: Arial;
   color:gold;
   padding: 0;
   margin: 0;
@@ -17,7 +16,7 @@ body {
   display: block;
   overflow: hidden;
   height: 50px;
-  width:100%;
+  width: 100%;
   background-color: var(--ciemnoszary);
   font-family: friz;
   font-weight: bold;
@@ -34,32 +33,31 @@ body {
   width: 50px;
   display: block;
   float:left;}
+
 #s1 div a:visited,a:link{
   color: var(--zloty);
-  text-decoration: none;
-}
-#s1 div ul li:hover{
-  border-bottom: 2px solid var(--zloty);
-}
+  text-decoration: none;}
+
 
 #s1 div ul{
+  padding-left: 10px;
   overflow: hidden;
   position: absolute;
   left: 50%;
-  transform: translate(-50%);
-  align-self: center;
-  margin: 0 auto;
-  display: block;
-  list-style-type: disc;
-  margin: 0;
-  padding-left: 10px;}
+  transform: translate(-50%); /* to center pion poz */
+  margin: 0 auto;}
+
 
 #s1 div ul li{
   float:left;
   padding:15px;/* pamietaj, tu beda %%!! */
-  list-style-type: none;
-}
+  list-style-type: none;}
 
+#s1 div ul li:hover{
+    border-bottom: 2px solid var(--zloty);}
+
+
+/* sektor 2 */
 #s2 div {
   height: calc(100vh - 52px);
   width: 100%;
