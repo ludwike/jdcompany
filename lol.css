@@ -21,7 +21,7 @@ body {
   background-color: var(--ciemnoszary);
   font-family: friz;
   font-weight: bold;
-  font-size: 1.5vh;
+  font-size: 10%;
   letter-spacing: 1px;
   text-transform: uppercase;
   border-bottom: 2px solid #262626;
