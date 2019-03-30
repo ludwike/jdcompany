@@ -52,7 +52,7 @@ body {
   display: block;
   list-style-type: disc;
   margin: 0;
-  padding-left: 40px;}
+  padding-left: 10px;}
 
 #s1 div ul li{
   float:left;
@@ -61,6 +61,6 @@ body {
 }
 
 #s2 div {
-  height: 900px;
+  height: calc(100vh - 52px);
   width: 100%;
   background-color: black}
