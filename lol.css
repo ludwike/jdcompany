@@ -4,19 +4,29 @@
   --zloty:#c9aa71;}
 
 @font-face {font-family: friz; src: url(frizquadra.ttf)}
+@font-face {font-family: penura; src: url(penura.otf)}
 body {
   margin:0;
-  font-family: friz;
+  font-family: Arial;
   color:gold;
-  font-size:15px;}
+  padding: 0;
+  margin: 0;
+}
 
 #s1 div{
+  display: block;
+  overflow: hidden;
   height: 50px;
   width:100%;
   background-color: var(--ciemnoszary);
   font-family: friz;
+  font-weight: bold;
+  font-size: 1.5vh;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   border-bottom: 2px solid #262626;
-  color: var(--zloty);}
+  color: var(--zloty);
+}
 
 #s1 div a{
   background:var(--ikonka) no-repeat 10px;
@@ -26,6 +36,12 @@ body {
   float:left;}
 
 #s1 div ul{
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  align-self: center;
+  margin: 0 auto;
   display: block;
   list-style-type: disc;
   margin: 0;
@@ -37,6 +53,6 @@ padding:15px;
 list-style-type: none;}
 
 #s2 div {
-  height: 1000px;
+  height: 900px;
   width: 100%;
   background-color: black}
