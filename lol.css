@@ -21,19 +21,26 @@ body {
   background-color: var(--ciemnoszary);
   font-family: friz;
   font-weight: bold;
-  font-size: 10%;
+  font-size: 2vh;
   letter-spacing: 1px;
   text-transform: uppercase;
   border-bottom: 2px solid #262626;
   color: var(--zloty);
 }
 
-#s1 div a{
+#s1 div a.icon{
   background:var(--ikonka) no-repeat 10px;
   height: 50px;
   width: 50px;
   display: block;
   float:left;}
+#s1 div a:visited,a:link{
+  color: var(--zloty);
+  text-decoration: none;
+}
+#s1 div ul li:hover{
+  border-bottom: 2px solid var(--zloty);
+}
 
 #s1 div ul{
   overflow: hidden;
@@ -48,9 +55,10 @@ body {
   padding-left: 40px;}
 
 #s1 div ul li{
-float:left;
-padding:15px;
-list-style-type: none;}
+  float:left;
+  padding:15px;/* pamietaj, tu beda %%!! */
+  list-style-type: none;
+}
 
 #s2 div {
   height: 900px;
