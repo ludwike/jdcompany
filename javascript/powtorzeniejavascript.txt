@@ -1,7 +1,7 @@
 <html>
 <head>
 <script type="text/javascript">
-// powtorzenie w zadanich z notatki https://thinfi.com/8p6 haslo sims4 sa tu 2 metody i jeden obiekt
+// powtorzenie w zadanich z notatki https://thinfi.com/8p6  sa tu 2 metody i jeden obiekt
 var mojobiekt = {
 	imie: 'adam',
 	nazwisko: 'majewski',
