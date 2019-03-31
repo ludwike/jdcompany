@@ -4,23 +4,51 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="jdcompany.css" type="text/css"> <!-- Plik css dla tego typu indexów html w tej domenie -->
+<script>
+<!--
+function changeDiv() {
+  var y = 's2';
+  var x = document.getElementById(y).innerHTML;
+  document.getElementById("s1").innerHTML = x;
+}
 
+-->
+</script>
 </head>
 <body>
 <h1>Hello!</h1>
-<section id="s1">
-<div>
 <p>Dostępne katalogi:</p>
-<a href="https://ludwike.github.io/jdcompany/batch/batch.html">pliki batch</a><br>
-<a href="https://ludwike.github.io/jdcompany/javascript/javascript.html">pliki javascript</a><br>
-<a href="https://ludwike.github.io/jdcompany/css/css.html">pliki css</a>
+<section id="s1"> <!-- s1 to lista odnosikow tylko -->
+<div>
+<a href="#" onclick="document.getElementById('s1').innerHTML = document.getElementById('s2bat').innerHTML;">piki batch</a><br>
+<a href="#" onclick="document.getElementById('s1').innerHTML = document.getElementById('s3js').innerHTML;">pliki javascript</a><br>
+<a href="#" onclick="document.getElementById('s1').innerHTML = document.getElementById('s4css').innerHTML;">pliki css</a><br>
 </div>
+</section>
+
+<section id="s2bat">
+  <a href="https://ludwike.github.io/jdcompany/batch/binario/binario.txt">Binario.bat</a>
+  <a href="https://ludwike.github.io/jdcompany/batch/binario/binario.bat">download</a><br>
+  <a href="https://ludwike.github.io/jdcompany/batch/coinflip/coinflip.txt">Coinflip.bat</a>
+  <a href="https://ludwike.github.io/jdcompany/batch/coinflip/coinflip.bat">download</a>
+</section>
+
+<section id="s3js">
+  <a href="https://ludwike.github.io/jdcompany/javascript/powtorzeniejavascript.txt">Podstawy_i_tworzenie_obiektów.js</a>
+  <a href="https://ludwike.github.io/jdcompany/javascript/powtorzeniejavascript.html" download>  download</a><br>
+  <a href="https://ludwike.github.io/jdcompany/javascript/form1.txt">Formularze_1.js</a>
+  <a href="https://ludwike.github.io/jdcompany/javascript/form1.html" download>  download</a>
+</section>
+
+<section id="s4css">
+  <a href="https://ludwike.github.io/jdcompany/css/tlo_i_kolor.txt">Tło_i_kolor.css</a>
+  <a href="https://ludwike.github.io/jdcompany/css/tlo_i_kolor.html download">download</a><br>
 </section>
 
 <footer>
 <p>Autor:</p>
 <a href=""> Adam "Ludwike" Majewski </a>
-<p id="jd">JD Company.</p>
+<p class="jd">JD Company.</p>
 </footer>
 
 

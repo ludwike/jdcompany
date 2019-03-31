@@ -12,7 +12,8 @@
   a:link,a:visited {color: #FFCBEF;}
   a:hover {color: #FFFF00;}
 
-  #s1 div p {color:#EE82EE}
+  /*#s1 div */ p {color:#EE82EE}
+  #s2bat,#s3js,#s4css {display: none}
 
 footer {
   text-decoration: none;
@@ -23,4 +24,4 @@ footer {
   line-height: 0.1cm;
   font-size: 14px;
   color:#EE82EE;}
-footer p#jd {color:red}
+footer p.jd {color:red}
