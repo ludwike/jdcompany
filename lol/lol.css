@@ -1,10 +1,10 @@
 * {
-  --ikonka:url("lol/lolicon2.png");
+  --ikonka:url("lolicon2.png");
   --ciemnoszary:#121212;
   --zloty:#c9aa71;}
 
-@font-face {font-family: friz; src: url(lol/frizquadra.ttf)}
-@font-face {font-family: penura; src: url(lol/penura.otf)}
+@font-face {font-family: friz; src: url(frizquadra.ttf)}
+@font-face {font-family: penura; src: url(penura.otf)}
 body {
   margin:0;
   color:gold;
