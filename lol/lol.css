@@ -58,7 +58,7 @@ body {
 #s1 div ul li:hover{
     border-bottom: 2px solid var(--zloty);}
 
-#nick {
+#s1 div #nick {
   font-weight: bold;
   color:#c9aa71;
   display: block;
@@ -68,18 +68,22 @@ body {
   width: 200px;
   height: 20px;
   position: absolute;
+  top: 14px;
   left: 85%;
   transform: translate(-50%);}
-#nick2 {
-  display: block;
-  text-align: center;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  left: 95%;
-  transform: translate(-50%);}
+  #s1 div  #nick2 {
+    width: 30px;
+    height: 20px;
+    display: block;
+    border: 1px solid #c9aa71;
+    background-color: #1f1b1b;
+    font-weight: bold;
+    color:#c9aa71;
+    top: 14px;
+    position: absolute;
+    left: 95%;
+    transform: translate(-50%);}
 
-}
 /* sektor 2 */
 #s2 div {
   height: calc(100vh - 52px);
