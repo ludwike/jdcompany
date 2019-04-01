@@ -58,45 +58,44 @@ body {
 #s1 div ul li:hover{
     border-bottom: 2px solid var(--zloty);}
 
-#s1 div #nick {
-  width: 200px;
-  height: 20px;
-  left: 85%;
-  transform: translate(-50%);
-  text-align: center;
-  display: block;
-  border: 1px solid #c9aa71;
-  background-color: #1f1b1b;
-  font-weight: bold;
-  color:#c9aa71;
-  top: 14px;
-  position: absolute;}
+    #s1 div #nick,#nick2,#nick3 {
+        text-align: center;
+        width: 60px;
+        height: 20px;
+        display: block;
+        border: 1px solid #c9aa71;
+        background-color: #1f1b1b;
+        font-weight: bold;
+        color:#c9aa71;
+        top: 14px;
+        position: absolute;
+        left: calc(85% + 133px);
+        transform: translate(-50%);}
 
-  #s1 div  #nick2 {
-    width: 60px;
-    height: 20px;
-    left: calc(85% + 133px);
-    transform: translate(-50%);}
+      #s1 div  #nick {
+                width: 60px;
+                height: 20px;
+                left: calc(85% - 133px);
+                transform: translate(-50%);}
 
-  #s1 div  #nick3 {
-      width: 60px;
-      height: 20px;
-      left: calc(85% - 133px);
-      transform: translate(-50%);}
+      #s1 div #nick2 {
+        width: 200px;
+        height: 20px;
+        left: 85%;
+        transform: translate(-50%);}
 
-  #s1 div #nick1,#nick2,#nick3 {
-    text-align: center;
-    width: 60px;
-    height: 20px;
-    display: block;
-    border: 1px solid #c9aa71;
-    background-color: #1f1b1b;
-    font-weight: bold;
-    color:#c9aa71;
-    top: 14px;
-    position: absolute;
-    left: calc(85% + 133px);
-    transform: translate(-50%);}
+        #s1 div  #nick3 {
+          width: 60px;
+          height: 20px;
+          left: calc(85% + 133px);
+          transform: translate(-50%);
+          cursor: pointer;}
+
+      #s1 div #nick3:hover{
+
+      }
+
+
 
 /* sektor 2 */
 #s2 div {
