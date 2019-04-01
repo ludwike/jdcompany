@@ -71,9 +71,11 @@ body {
   top: 14px;
   left: 85%;
   transform: translate(-50%);}
-/*  #s1 div  #nick2 {
-    width: 30px;
-    height: 24px;
+  #s1 div  #nick2 {
+    padding-left: 0;
+    margin-left: 0;
+    width: 60px;
+    height: 20px;
     display: block;
     border: 1px solid #c9aa71;
     background-color: #1f1b1b;
@@ -82,7 +84,7 @@ body {
     top: 14px;
     position: absolute;
     left: 95%;
-    transform: translate(-50%);} */
+    transform: translate(-50%);}
 
 /* sektor 22 */
 #s2 div {
