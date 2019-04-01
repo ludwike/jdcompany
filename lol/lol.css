@@ -66,14 +66,14 @@ body {
   background-color: #1f1b1b;
   border: 1px solid #c9aa71;
   width: 200px;
-  height: 20px;
+  height: 24px !important;
   position: absolute;
   top: 14px;
   left: 85%;
   transform: translate(-50%);}
   #s1 div  #nick2 {
     width: 30px;
-    height: 20px;
+    height: 24px !important;
     display: block;
     border: 1px solid #c9aa71;
     background-color: #1f1b1b;
