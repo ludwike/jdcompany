@@ -4,16 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="lol/lol.css" type="text/css">
+<script>
+jd () {
+var a = document.getElementById('nick');
+alert(a);
+}
+</script>
 </head>
 <body>
 <section id="s1">
   <div>
-    <a class="icon"href="https://ludwike.github.io/jdcompany/lol.html"></a>
+    <a class="icon" href="https://ludwike.github.io/jdcompany/lol.html"></a>
       <ul>
         <li><a href="#">o grze</a></li>
         <li><a href="#">uniwersum</a></li>
         <li><a href="#">e-sport</a></li>
       </ul>
+          <input id="nick" type="text">
+          <input id="nick2" onClick="var a = document.getElementById('nick').value;alert(a)" type="submit">
     </div>
   </section>
 

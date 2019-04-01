@@ -16,7 +16,7 @@ body {
   display: block;
   overflow: hidden;
   height: 50px;
-  width: 100%;
+  width: 100vw;
   background-color: var(--ciemnoszary);
   font-family: friz;
   font-weight: bold;
@@ -28,6 +28,7 @@ body {
 }
 
 #s1 div a.icon{
+  margin-left: 5px;
   background:var(--ikonka) no-repeat 10px;
   height: 50px;
   width: 50px;
@@ -41,6 +42,7 @@ body {
 
 #s1 div ul{
   padding-left: 10px;
+  padding-right: 10px;
   overflow: hidden;
   position: absolute;
   left: 50%;
@@ -56,7 +58,28 @@ body {
 #s1 div ul li:hover{
     border-bottom: 2px solid var(--zloty);}
 
+#nick {
+  font-weight: bold;
+  color:#c9aa71;
+  display: block;
+  text-align: center;
+  background-color: #1f1b1b;
+  border: 1px solid #c9aa71;
+  width: 200px;
+  height: 20px;
+  position: absolute;
+  left: 85%;
+  transform: translate(-50%);}
+#nick2 {
+  display: block;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 95%;
+  transform: translate(-50%);}
 
+}
 /* sektor 2 */
 #s2 div {
   height: calc(100vh - 52px);
