@@ -8,12 +8,14 @@
 <script>
 <!--
 function zaladuj(){
-var a = document.getElementById('nick').value;
+  var a = document.getElementById('nick').value;
   var b = document.getElementById('nick2').value;
-window.location = ("https://" + a + ".op.gg/summoner/userName=" + b +"")
+if(a=='undefined' || ""){
+  var a = "EUW";
+  var b = "Ludwike";}
+window.location = ("https://" + a + ".op.gg/summoner/userName=" + b +"");
 }
 -->
-</script>
 </script>
 </head>
 <body>
@@ -25,14 +27,13 @@ window.location = ("https://" + a + ".op.gg/summoner/userName=" + b +"")
         <li><a href="#">uniwersum</a></li>
         <li><a href="#">e-sport</a></li>
       </ul>
-          <input id="nick" list="browsers">
+          <input placeholder="EUW" id="nick" list="browsers">
             <datalist id="browsers">
               <option value="EUW">
               <option value="EUNE">
               </datalist>
-          <input id="nick2" value="Ludwike" type="text" maxlength="20">
-          <input id="nick3" value="Załaduj"
-           onClick="zaladuj()">
+          <input id="nick2" placeholder="Nickname" type="text" maxlength="20">
+          <button value="xD" id="nick3" value="Załaduj" onClick="zaladuj()">Load</button>
 
     </div>
   </section>
