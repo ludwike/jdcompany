@@ -6,16 +6,31 @@
   <link rel="stylesheet" href="jdcompany.css" type="text/css"> <!-- Plik css dla tego typu indexów html w tej domenie -->
 <script>
 <!--
-function changeDiv() {
-  var y = 's2';
-  var x = document.getElementById(y).innerHTML;
-  document.getElementById("s1").innerHTML = x;
-}
+var r = Math.floor(Math.random()*255+1);
+var g = Math.floor(Math.random()*255+1);
+var b = Math.floor(Math.random()*255+1);
+var moc = 3;
+var znaki = '+=';
 
+function tlo(){
+console.log(r);
+
+if(r<255){r += moc}
+if(r<0){moc = 3}
+if(r>255){moc = -3}
+
+if(g<255){g += moc}
+else{g = 0}
+if(b<255){b += moc}
+else{b = 0}
+
+console.log(r + " " + g + " " + b);
+document.getElementById('b1').style.background = "rgb(" +r + "," +g + ","+b+ ")";
+}
 -->
 </script>
 </head>
-<body>
+<body id="b1" onMouseMove="tlo()">
 <h1>Hello!</h1>
 <p>Dostępne katalogi:</p>
 <section id="s1"> <!-- s1 to lista odnosikow tylko -->
