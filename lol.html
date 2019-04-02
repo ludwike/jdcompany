@@ -2,8 +2,19 @@
 <html lang="pl-PL">
 <title>League of Legends</title>
 <head>
+  <link rel="shortcut icon" href="lol/lolicon.png ">
   <meta charset="UTF-8">
   <link rel="stylesheet" href="lol/lol.css" type="text/css">
+<script>
+<!--
+function zaladuj(){
+var a = document.getElementById('nick').value;
+  var b = document.getElementById('nick2').value;
+window.location = ("https://" + a + ".op.gg/summoner/userName=" + b +"")
+}
+-->
+</script>
+</script>
 </head>
 <body>
 <section id="s1">
@@ -20,14 +31,17 @@
               <option value="EUNE">
               </datalist>
           <input id="nick2" value="Ludwike" type="text" maxlength="20">
-          <input id="nick3" value="Załaduj" onClick="var a = document.getElementById('nick').value;var b = document.getElementById('nick3').value;window.location = 'http://www.google.pl/'">
+          <input id="nick3" value="Załaduj"
+           onClick="zaladuj()">
 
     </div>
   </section>
 
 <section id="s2">
   <div>
-onClick="var a = document.getElementById('nick').value;var b = document.getElementById('nick3').value;window.location = 'http://www.google.pl/'"
+ onClick="var a = document.getElementById('nick').value;var b = document.getElementById('nick3').value;window.location = 'http://www.google.pl/'"
+
+  onClick="var a = document.getElementById('nick').value;var b = document.getElementById('nick3').value;window.location = 'http://www.google.pl/%%a'">
   </div>
 </section>
 
