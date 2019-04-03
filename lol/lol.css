@@ -5,6 +5,8 @@
 
 @font-face {font-family: friz; src: url(frizquadra.ttf)}
 @font-face {font-family: penura; src: url(penura.otf)}
+@font-face {font-family: grobold; src: url(grobold.ttf)}
+
 body {
   margin:0;
   color:gold;
@@ -99,6 +101,18 @@ body {
 
 /* sektor 2 */
 #s2 div {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color:#c9aa71;
+  float:left;
   height: calc(100vh - 52px);
   width: 100%;
   background-color: black}
+#s2 div h2 {
+  font-family: grobold;
+  margin-top:20px;
+  font-size: 50px;
+  letter-spacing: 3px;
+  text-shadow: 7px -5px 30px rgba(201, 170, 113, 0.5);
+}

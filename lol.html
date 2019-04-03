@@ -7,25 +7,32 @@
   <link rel="stylesheet" href="lol/lol.css" type="text/css">
 <script>
 <!--
+onLoad1(){
+document.getElementById('nazwa').innerHTML = document.getElementById('nick2').value;
+}
+
 function zaladuj(){
   var a = document.getElementById('nick').value;
   var b = document.getElementById('nick2').value;
 if(a==""){
   var a = "EUW";
   var b = "Ludwike";}
-window.location = ("https://" + a + ".op.gg/summoner/userName=" + b); //DAWID NAPRAWIŁ I POMÓGŁ, SERDECZNA CHWAŁA 3 JD DLA NIEGO
+window.location = ("https://" + a + ".op.gg/summoner/userName=" + b);
+//DAWID NAPRAWIŁ I POMÓGŁ, SERDECZNA CHWAŁA 3 JD DLA NIEGO.
+}
+
 }
 -->
 </script>
 </head>
-<body>
+<body onLoad="onLoad1">
 <section id="s1">
   <div>
     <a class="icon" href="https://ludwike.github.io/jdcompany/lol.html"></a>
       <ul>
         <li><a href="#">o grze</a></li>
         <li><a href="#">uniwersum</a></li>
-        <li><a href="#">e-sport</a></li>
+        <li><a href="#">proplayers</a></li>
       </ul>
           <input placeholder="EUW" id="nick" list="browsers">
             <datalist id="browsers">
@@ -33,13 +40,16 @@ window.location = ("https://" + a + ".op.gg/summoner/userName=" + b); //DAWID NA
               <option value="EUNE">
               </datalist>
           <input id="nick2" placeholder="Nickname" type="text" maxlength="20">
-          <button value="xD" id="nick3" value="Załaduj" onClick="zaladuj()">Load</button>
-
+          <button value="xD" id="nick3" value="Załaduj" onClick="zaladuj();onLoad1()">Load</button>
     </div>
   </section>
 
 <section id="s2">
-  <div>
+   <div>
+     <h2 id="nazwa">DisStream</h2>
+
+
+
   </div>
 </section>
 
