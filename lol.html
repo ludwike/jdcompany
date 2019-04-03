@@ -7,25 +7,25 @@
   <link rel="stylesheet" href="lol/lol.css" type="text/css">
 <script>
 <!--
-onLoad1(){
-document.getElementById('nazwa').innerHTML = document.getElementById('nick2').value;
-}
+function onLoad1(){
+
+document.getElementById('nazwa').innerHTML = document.getElementById('nick2').value;}
+
 
 function zaladuj(){
   var a = document.getElementById('nick').value;
   var b = document.getElementById('nick2').value;
-if(a==""){
+
+if(a='undefined' || ""){
   var a = "EUW";
   var b = "Ludwike";}
-window.location = ("https://" + a + ".op.gg/summoner/userName=" + b);
-//DAWID NAPRAWIŁ I POMÓGŁ, SERDECZNA CHWAŁA 3 JD DLA NIEGO.
+// window.location = ("https://" + a + ".op.gg/summoner/userName=" + b +"");
 }
 
-}
 -->
 </script>
 </head>
-<body onLoad="onLoad1">
+<body>
 <section id="s1">
   <div>
     <a class="icon" href="https://ludwike.github.io/jdcompany/lol.html"></a>
@@ -40,7 +40,7 @@ window.location = ("https://" + a + ".op.gg/summoner/userName=" + b);
               <option value="EUNE">
               </datalist>
           <input id="nick2" placeholder="Nickname" type="text" maxlength="20">
-          <button value="xD" id="nick3" value="Załaduj" onClick="zaladuj();onLoad1()">Load</button>
+          <button id="nick3" value="Załaduj" onClick="zaladuj();onLoad1()">Load</button>
     </div>
   </section>
 
