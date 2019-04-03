@@ -9,20 +9,16 @@
 var r = Math.floor(Math.random()*255+1);
 var g = Math.floor(Math.random()*255+1);
 var b = Math.floor(Math.random()*255+1);
-var moc = 3;
-var znaki = '+=';
-
+var io = 0;
 function tlo(){
-console.log(r);
+if(io==0){
+if(r<255){r += 5;} // jezeli r jest mn  iejsze od 255
+if(r>=255){io = 1;}} // jezeli r jest wieksze lub rowne 255
+if(io==1){
+  if(r>0){r -= 5;}
+  if(r<=0){io = 0}
+}
 
-if(r<255){r += moc}
-if(r<0){moc = 3}
-if(r>255){moc = -3}
-
-if(g<255){g += moc}
-else{g = 0}
-if(b<255){b += moc}
-else{b = 0}
 
 console.log(r + " " + g + " " + b);
 document.getElementById('b1').style.background = "rgb(" +r + "," +g + ","+b+ ")";
