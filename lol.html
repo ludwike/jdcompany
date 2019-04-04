@@ -8,8 +8,12 @@
 <script>
 <!--
 function onLoad1(){
-
-document.getElementById('nazwa').innerHTML = document.getElementById('nick2').value;}
+var wartoscnick2 = document.getElementById('nick2').value;
+document.getElementById('nazwa').innerHTML = wartoscnick2;
+if(wartoscnick2==""){
+  document.getElementById('nazwa').innerHTML = 'Your_nickname';
+}
+}
 
 
 function zaladuj(){
