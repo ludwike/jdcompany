@@ -104,7 +104,7 @@ body {
 
 
 
-/* sektor 2 */
+/* sektor 2 */ /* sektor 2 */ /* sektor 2 */ /* sektor 2 */
 #s2 div#glowny {
   display: block;
   margin: 0;
@@ -124,6 +124,8 @@ body {
   letter-spacing: 3px;
   text-shadow: 7px -5px 30px rgba(201, 170, 113, 0.5);
 }
+
+/* 4 PRZYCISKI */ /* 4 PRZYCISKI */ /* 4 PRZYCISKI */
 #s2 div#ramka{
 margin: 0;
 padding: 0;
@@ -227,5 +229,9 @@ transform: translate(-50%);
 #s2 div#ramka ul li#ikon4:after
 {background: linear-gradient(45deg,#89ff00,#00bcd4);
   font-family: obelix;
+font-size: 34px;
+}
 
+#s2 div#ramka ul li a:hover #s2 div h2{
+  background-color: pink;
 }
