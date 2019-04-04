@@ -7,6 +7,9 @@
 @font-face {font-family: penura; src: url(penura.otf)}
 @font-face {font-family: grobold; src: url(grobold.ttf)}
 @font-face {font-family: obelix; src: url(obelix.ttf)}
+@font-face {font-family: natural; src: url(naturalmaker.otf)}
+@font-face {font-family: adventure; src: url(adventure.otf)}
+@font-face {font-family: comic; src: url(comic.otf)}
 
 body {
   margin:0;
@@ -190,21 +193,39 @@ transform: translate(-50%);
   border-radius: 50%;
 
 }
-#s2 div#ramka ul li a{
+#s2 div#ramka ul li a.fa{
   text-shadow: 0 2px 5px rgba(0,0,0,0.2);
   transition: 0.5s;
   transform: rotateY(0deg) scale(0.8);
   opacity: 0.3;
 }
-#s2 div#ramka ul li a:hover{
+#s2 div#ramka ul li a:hover {
   opacity: 1;
   transform: scale(1.2);
 }
-#s2 div#ramka ul li a#ikon1,
-#s2 div#ramka ul li:before,
-#s2 div#ramka ul li:after
+#s2 div#ramka ul li#ikon1 a,
+#s2 div#ramka ul li#ikon1:before,
+#s2 div#ramka ul li#ikon1:after
 {background: linear-gradient(45deg,rgb(1,178,255),rgb(83,131,233));
-}
-#s2 div#ramka ul li a#ikon1{
   font-family: obelix;
+}
+#s2 div#ramka ul li#ikon2 a,
+#s2 div#ramka ul li#ikon2:before,
+#s2 div#ramka ul li#ikon2:after
+{background: linear-gradient(45deg,rgb(147,28,75),rgb(103,44,108));
+  font-family: natural;
+}
+#s2 div#ramka ul li#ikon3 a,
+#s2 div#ramka ul li#ikon3:before,
+#s2 div#ramka ul li#ikon3:after
+{background: linear-gradient(45deg,#ff0000,#ffc107);
+  font-family: adventure;
+  font-size:40px;
+}
+#s2 div#ramka ul li#ikon4 a,
+#s2 div#ramka ul li#ikon4:before,
+#s2 div#ramka ul li#ikon4:after
+{background: linear-gradient(45deg,#89ff00,#00bcd4);
+  font-family: obelix;
+
 }

@@ -11,13 +11,15 @@ function onLoad1(){
 var wartoscnick2 = document.getElementById('nick2').value;
 document.getElementById('nazwa').innerHTML = wartoscnick2;
 if(wartoscnick2==""){
-  document.getElementById('nazwa').innerHTML = 'Your_nickname';
-  alert('Wpisz swój nick klaunie!');}
+document.getElementById('nazwa').innerHTML = 'Your_nickname';}
+
 }
 function przekierowanie(){
   var a = document.getElementById('nick').value;
   var b = document.getElementById('nick2').value;
-window.location = ("https://" + a + ".op.gg/summoner/userName=" + b +"");
+if(a==0){var a = 'EUW'}
+if(b != ""){window.location = ("https://" + a + ".op.gg/summoner/userName=" + b +""); return;}
+alert('Write your nickname clown!');
 }
 
 
@@ -48,10 +50,10 @@ window.location = ("https://" + a + ".op.gg/summoner/userName=" + b +"");
      <h2 id="nazwa">Your_nickname</h2>
      <div id="ramka">
        <ul>
-         <li><a id="ikon1" href="#" onClick="przekierowanie()">op.gg</a></li>
-         <li><a id="ikon2" href="#">xd2</a></li>
-         <li><a id="ikon3" href="#">xd3</a></li>
-         <li><a id="ikon4" href="#">xd4</a></li>
+         <li id="ikon1"><a class="fa" href="#" onClick="przekierowanie()">op.gg</a></li>
+         <li id="ikon2"><a class="fa" href="#">lolwaste</a></li>
+         <li id="ikon3"><a class="fa" href="#">maestry</a></li>
+         <li id="ikon4"><a class="fa" href="#">lolskill</a></li>
      </div>
 
 
