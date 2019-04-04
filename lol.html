@@ -11,11 +11,8 @@ function onLoad1(){
 var wartoscnick2 = document.getElementById('nick2').value;
 document.getElementById('nazwa').innerHTML = wartoscnick2;
 if(wartoscnick2==""){
-  document.getElementById('nazwa').innerHTML = 'Your_nickname';
+  document.getElementById('nazwa').innerHTML = 'Your_nickname';}
 }
-}
-
-
 function zaladuj(){
   var a = document.getElementById('nick').value;
   var b = document.getElementById('nick2').value;
@@ -25,6 +22,7 @@ if(a='undefined' || ""){
   var b = "Ludwike";}
 // window.location = ("https://" + a + ".op.gg/summoner/userName=" + b +"");
 }
+
 
 -->
 </script>
@@ -49,8 +47,15 @@ if(a='undefined' || ""){
   </section>
 
 <section id="s2">
-   <div>
+   <div id="glowny">
      <h2 id="nazwa">DisStream</h2>
+     <div id="panel">
+       <ul>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+     </div>
 
 
 

@@ -58,7 +58,8 @@ body {
   list-style-type: none;}
 
 #s1 div ul li:hover{
-  border-bottom: 2px solid var(--zloty);}
+  border-bottom: 2px solid var(--zloty);
+  transition: 0.1s;}
 
 #s1 div #nick,#nick2,#nick3 {
   text-align: center;
@@ -100,7 +101,8 @@ body {
 
 
 /* sektor 2 */
-#s2 div {
+#s2 div#glowny {
+  display: block;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -110,9 +112,39 @@ body {
   width: 100%;
   background-color: black}
 #s2 div h2 {
+  padding-top: 15px;
+  margin-bottom: 0px;
   font-family: grobold;
   margin-top:20px;
   font-size: 50px;
   letter-spacing: 3px;
   text-shadow: 7px -5px 30px rgba(201, 170, 113, 0.5);
+}
+#s2 div#panel{
+position: absolute;
+left: 50%;
+transform: translate(-50%);
+height: 50vh;
+width: 80vw;
+border:1px solid rgba(201, 170, 113, 0.7);
+border-radius: 10px;
+background-color: #1f1b1b;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#s2 div ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+#s2 div li{
+  position: relative;
+  list-style: none;
+  width: 100px;
+  height: 100px;
+  margin: 0 10px;
+  border-radius: 50%;
+  box-sizing: border-box;
 }
