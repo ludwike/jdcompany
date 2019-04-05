@@ -5,43 +5,11 @@
   <link rel="shortcut icon" href="lol/lolicon.png ">
   <meta charset="UTF-8">
   <link rel="stylesheet" href="lol/lol.css" type="text/css">
+<script src="lol/lol.js"></script>
 <script>
 <!--
-function onLoad1(){
-var wartoscnick2 = document.getElementById('nick2').value;
-document.getElementById('nazwa').innerHTML = wartoscnick2;
-if(wartoscnick2==""){
-document.getElementById('nazwa').innerHTML = 'Your_nickname';}
-
-}
-function przekierowanie1(){
-  var a = document.getElementById('nick').value;
-  var b = document.getElementById('nick2').value;
-if(a==0){var a = 'euw'}
-if(b != ""){window.location = ("https://" + a + ".op.gg/summoner/userName=" + b +""); return;}
-alert('Write your nickname clown!');
-}
-function przekierowanie2(){
-  var a = document.getElementById('nick').value;
-  var b = document.getElementById('nick2').value;
-if(a==0){var a = 'euw'}
-if(b != ""){window.location = ("https://wol.gg/stats/" + a +"/" + b +"/"); return;}
-alert('Write your nickname clown!');
-}
-function przekierowanie3(){
-  var a = document.getElementById('nick').value;
-  var b = document.getElementById('nick2').value;
-if(a==0){var a = 'euw'}
-if(b != ""){window.location = ("https://www.masterypoints.com/player/" + b + "/" + a + ""); return;}
-alert('Write your nickname clown!');
-}
-function przekierowanie4(){
-  var a = document.getElementById('nick').value;
-  var b = document.getElementById('nick2').value;
-if(a==0){var a = 'euw'}
-if(b != ""){window.location = ("http://www.lolskill.net/summoner/" + a + "/"+ b + ""); return;}
-alert('Write your nickname clown!');
-}
+function czytoenter(){}
+http://yarpo.pl/2012/06/29/obsluga-skrotow-klawiszowych-z-poziomu-javascript/
 -->
 </script>
 </head>
@@ -54,14 +22,16 @@ alert('Write your nickname clown!');
         <li><a href="#">HALL OF FAME</a></li>
         <li><a href="#">proplayers</a></li>
       </ul>
+
           <input placeholder="EUW" id="nick" list="browsers">
             <datalist id="browsers">
               <option value="EUW">
               <option value="EUNE">
               </datalist>
           <input id="nick2" placeholder="Nickname" type="text" maxlength="20">
-          <button id="nick3" value="Załaduj" onClick="onLoad1()">Load</button>
+          <button id="nick3" value="Załaduj" onClick="onLoad1();czytoenter();">Load</button>
     </div>
+
   </section>
 
 <section id="s2">
