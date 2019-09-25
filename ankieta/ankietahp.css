@@ -1,0 +1,50 @@
+html {
+  height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background: linear-gradient(to right,#00c6ff,#0072ff);
+}
+
+#glowny   {
+    background: linear-gradient(to right,#80aaff,#b3ccff);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,+5%);
+    border-radius: 5%;
+    border: 2px solid black;
+    width: 800px;
+    height: 1200px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 150%;
+    -webkit-transition: width 2s;
+    transition: width 2s;
+
+
+  }
+  #glowny:hover{
+    background: linear-gradient(to left,#80aaff,#b3ccff);
+    width: 1000px;}
+
+
+  #glowny:hover input, #glowny:hover .przycisk{
+    width: 350px;
+  }
+
+  input,.przycisk {
+      text-align: center;
+      line-height: 0;
+      background-color: #dbe3ff;
+      border: 1px solid black;
+      height: 22px;
+      width: 250px;
+      font-size: 15px;
+      -webkit-transition: width 2s;
+      transition: width 2s;
+
+}
