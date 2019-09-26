@@ -1,4 +1,4 @@
-html {
+`html {
   height: 100%;
   margin: 0px;
   padding: 0px;}
@@ -42,7 +42,14 @@ top: calc(50vh - 250px);
 #kwadrat3{
   top: calc(50% - 165px);
   left: calc(50% + 165px);
-  transform: translate(-50%,-50%);}
+  transform: translate(-50%,-50%);
+  text-align: center;
+  overflow: hidden;}
+#love{
+  font-size: 22px;
+  transform: translate(73%,200%);
+  overflow: visible;
+  color:red;}
 
 #kwadrat4{
   top: calc(50%);
@@ -76,25 +83,32 @@ top: calc(50vh - 250px);
 
 #kwadrat1:hover{
   animation-name: kwadrato1;
-  animation-duration: 1s;
-}
+  animation-duration: 2s;}
+
 @keyframes kwadrato1 {
-  0% {background-color: white;}
-  50% {background-color: red;}
-  75% {background-color: yellow;}
-  100% {background-color: white;}
-  from {border:1px solid red;}
-  to {border:1px solid blue;}
-}
+  0% {background-color: white; border:1px solid red;}
+  20% {background-color: red; border:5px solid blue;}
+  45% {background-color: yellow; border:3px solid green;}
+  65% {background-color: green; border:9px solid yellow;}
+  85% {background-color: violet; border:4px solid white;}
+  100%{background-color: white; border:1px solid white;}}
+
  #kwadrat2:hover{
-  transition: width 2s,height 2s;
-  width: 100px;
-  height: 100px;
-}
+  animation-duration: 2s;;
+  animation-name: kwadrato2;}
+
+@keyframes kwadrato2 {
+  0% {height: 125px; width: 125px;}
+  20% {height: 110px; width: 110px;}
+  40% {height: 75px; width: 75px;}
+  60% {height: 50px; width: 50px;}
+  80% {height: 70px; width: 160px;}
+  100% {height: 125px; width: 125px;}}
 
 #kwadrat3:hover{
-opacity: 0;
+  opacity: 0;
 }
+
 
 
 /*  #main div#pole{
