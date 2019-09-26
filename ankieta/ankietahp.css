@@ -45,6 +45,9 @@ body {
       width: 250px;
       font-size: 15px;
       -webkit-transition: width 2s;
-      transition: width 2s;
+      transition: width 2s;}
 
+input:hover{
+  transition: height 1s;
+  height: 44px;
 }
