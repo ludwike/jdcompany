@@ -82,3 +82,8 @@ header h3 {
     transform: rotate(-15deg);
   }
 }
+@media (max-width: 1440px) {
+  hgroup h3 span::after {
+    content: 'jebac disa';
+  }
+}
