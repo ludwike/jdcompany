@@ -10,7 +10,7 @@ header {
   height: 100vh;
   background-color: #81a6e3;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   font-family: 'Oswald';}
 
 main {
