@@ -57,28 +57,85 @@ header h3 {
   text-align: center;
 }
 
-@media (orientation: portrait) {
+@media (orientation: portrait) { /* tekst do drugiej linii */
   hgroup h3 span::after {
     content: '\A';
-    white-space: pre;
-  }
-}
+    white-space: pre;}}
 
 @media (orientation: landscape) {
   header img {
     height: 60%;
-    right: 5%;
-  }
-}
+    right: 5%;}}
 
 @media (max-width: 320px) { /* nokia lumia  xD */
-  header h3 {
-    font-size: 2.4rem;
-  }
-  header h1 {
-    font-size: 3.6rem;
-  }
   header hgroup {
-    transform: rotate(-15deg);
-  }
-}
+    left: 6%}
+
+  header h1 {
+    font-size: 3.4rem;}
+
+  header h3 {
+    font-size: 2.2rem;}
+
+  header hgroup {
+    transform: rotate(-15deg);}}
+
+
+@media (max-width: 370px) { /* samsung  galaxy s5 */
+  header h1 {
+    font-size: 3.7rem;}
+
+  header h3 {
+    font-size: 2.6rem;}
+
+  header img{
+      height: 55%;
+      right: -38%;}}
+
+@media (max-width: 700px) { /* iphone X */
+  header h1 {
+    color: red;
+    font-size: 6.7rem;}
+  header h3{
+    font-size: 4.3rem;}
+  header img {
+    height: 53%;
+    right: -10%;}}
+
+@media (min-width: 701px) { /* ipad */
+  hgroup h3 span::after {
+    color: red;
+    content: '\A';
+    white-space: pre;}
+  header h1 {
+    font-size: 9.5rem;}
+  header h3 {
+    font-size: 5.8rem;}
+  header img {
+    height: 57%;
+    right: -2%;}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .
