@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;}
+
+html {
+  font-size: 10px;}
+
+header {
+  height: 100vh;
+  background-color: #81a6e3;
+  position: relative;
+  overflow-x: hidden;
+  font-family: 'Oswald';}
+
+main {
+  height: 100vh;
+  background-color: grey;}
+
+header img {
+  position: absolute;
+  bottom: -2%;
+  height: 60%;
+  right: -30%;
+  overflow:}
+
+header nav {
+  position: absolute;
+  right: 5%;
+  top: 2%;
+  font-size: 3rem;}
+
+header hgroup{
+  position: absolute;
+  top: 11%;
+  left: 8%;
+  text-transform: uppercase;
+  z-index: 1}
+
+header h1{
+  font-size: 4rem;}
+
+header h3 {
+  font-size: 2.8rem;
+  font-weight: 400;}
+
+#arrow {
+  width: 40px;
+  height: 40px;
+  border: 3px solid black;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  text-align: center;
+}
+
+@media (orientation: portrait) {
+  hgroup h3 span::after {
+    content: '\A';
+    white-space: pre;
+  }
+}
+
+@media (orientation: landscape) {
+  header img {
+    height: 60%;
+    right: 5%;
+  }
+}
+
+@media (max-width: 320px) { /* nokia lumia  xD */
+  header h3 {
+    font-size: 2.4rem;
+  }
+  header h1 {
+    font-size: 3.6rem;
+  }
+  header hgroup {
+    transform: rotate(-15deg);
+  }
+}
