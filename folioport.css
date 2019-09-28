@@ -102,7 +102,7 @@ header h3 {
     height: 53%;
     right: -32%;}}
 
-@media (min-width: 551px) and (max-width: 1000px) { /* ipad */
+@media (min-width: 551px) and (max-width: 850px) { /* ipad */
   header h1{
     font-size: 7.5rem;}
 
@@ -112,6 +112,21 @@ header h3 {
   header img{
     height: 52%;
     right: -15%;}}
+
+@media (min-width: 851px) {
+  hgroup h3 span::after {
+    content: '\A';
+    white-space: pre;}
+
+  header h1{
+    font-size: 10.5rem}
+
+  header h3{
+    font-size: 7rem}
+
+  header img{
+    height: 55%;
+    right: 0%}}
 
 
 
