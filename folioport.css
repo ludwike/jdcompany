@@ -67,9 +67,9 @@ header h3 {
     height: 60%;
     right: 5%;}}
 
-@media (max-width: 320px) { /* nokia lumia  xD */
+@media (min-width: 100px) and (max-width: 330px) { /* nokia lumia  xD */
   header hgroup {
-    left: 6%}
+    left: 6%;}
 
   header h1 {
     font-size: 3.4rem;}
@@ -78,10 +78,9 @@ header h3 {
     font-size: 2.2rem;}
 
   header hgroup {
-    transform: rotate(-15deg);}}
+    transform: rotate(-2.5deg);}}
 
-
-@media (max-width: 370px) { /* samsung  galaxy s5 */
+@media (min-width: 331px) and (max-width: 365px) { /* samsung  galaxy s5 */
   header h1 {
     font-size: 3.7rem;}
 
@@ -89,32 +88,30 @@ header h3 {
     font-size: 2.6rem;}
 
   header img{
-      height: 55%;
-      right: -38%;}}
+    height: 55%;
+    right: -23  %;}}
 
-@media (max-width: 700px) { /* iphone X */
+@media (min-width: 366px) and (max-width: 550px) { /* iphone X */
   header h1 {
-    color: red;
-    font-size: 6.7rem;}
+    font-size: 4.1rem;}
+
   header h3{
-    font-size: 4.3rem;}
+    font-size: 3.1rem;}
+
   header img {
     height: 53%;
-    right: -10%;}}
+    right: -32%;}}
 
-@media (min-width: 701px) { /* ipad */
-  hgroup h3 span::after {
-    color: red;
-    content: '\A';
-    white-space: pre;}
-  header h1 {
-    font-size: 9.5rem;}
-  header h3 {
-    font-size: 5.8rem;}
-  header img {
-    height: 57%;
-    right: -2%;}}
+@media (min-width: 551px) and (max-width: 1000px) { /* ipad */
+  header h1{
+    font-size: 7.5rem;}
 
+  header h3{
+    font-size: 5.3rem;}
+
+  header img{
+    height: 52%;
+    right: -15%;}}
 
 
 
