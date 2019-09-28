@@ -18,6 +18,9 @@ main {
   height: 100vh;
   background-color: #B803FF;}
 
+a,a:hover,a:visited,a:link{
+  color: black;}
+
 header img {
   position: absolute;
   bottom: -2%;
