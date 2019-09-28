@@ -4,7 +4,7 @@
   box-sizing: border-box;}
 
 html {
-  font-size: 10px;}
+  font-size: 11px;}
 
 header {
   height: 100vh;
@@ -93,10 +93,10 @@ header h3 {
 
 @media (min-width: 366px) and (max-width: 550px) { /* iphone X */
   header h1 {
-    font-size: 4.1rem;}
+    font-size: 4rem;}
 
   header h3{
-    font-size: 3.1rem;}
+    font-size: 3rem;}
 
   header img {
     height: 53%;
