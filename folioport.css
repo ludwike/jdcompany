@@ -18,7 +18,7 @@ main {
   height: 100vh;
   background-color: #B803FF;}
 
-a,a:hover,a:visited,a:link{
+a,a:hover,a:visited,a:link,a:focus{
   color: black;}
 
 header img {
