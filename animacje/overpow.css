@@ -56,24 +56,13 @@ top: calc(50vh - 250px);
   left: calc(50% - 165px);
   transform: translate(-50%,-50%);}
 
+
+
 #kwadrat5{
   top: calc(50%);
   left: calc(50%);
-  transform: translate(-50%,-50%);
-/*  text-align: center;
-  position: absolute;
-z-index: 1; */}
+  transform: translate(-50%,-50%);}
 
-/* #kwadrat5 span{
-  position: absolute;
-  color: black;
-  text-transform: uppercase;
-  display: block;}
-
-#kwadrat5 span.text1{
-  font-size: 45px;
-  font-weight: 700;
-  letter-spacing: 8px;} */
 
 #kwadrat6{
   top: calc(50%);

@@ -60,7 +60,17 @@ header h3 {
   transform: translateX(-50%);
   font-size: 2rem;
   text-align: center;
+  background-color: rgba(36, 112, 255,0.5);
+  animation: strzalka 2s infinite;
 }
+
+@keyframes strzalka {
+0% {bottom: 10.8%}
+50% {bottom: 9.5%}
+100% {bottom: 10.8%}
+}
+
+
 
 @media (orientation: portrait) { /* tekst do drugiej linii */
   hgroup h3 span::after {
