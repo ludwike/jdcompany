@@ -12,7 +12,8 @@ header {
   background-color: #81a6e3;
   position: relative;
   overflow: hidden;
-  font-family: 'Oswald';}
+  font-family: 'Oswald';
+  border-bottom: 3px solid black;}
 
 main {
   height: 100vh;
@@ -82,7 +83,7 @@ header h3 {
     font-size: 2.2rem;}
 
   header hgroup {
-    transform: rotate(-2.5deg);}}
+    transform: rotate(-0.5deg);}}
 
 @media (min-width: 331px) and (max-width: 365px) { /* samsung  galaxy s5 */
   header h1 {
@@ -117,7 +118,7 @@ header h3 {
     height: 52%;
     right: -15%;}}
 
-@media (min-width: 851px) {
+@media (min-width: 851px) { /* pc'ty */
   hgroup h3 span::after {
     content: '\A';
     white-space: pre;}
