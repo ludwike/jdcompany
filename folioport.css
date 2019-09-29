@@ -13,7 +13,7 @@ header {
   position: relative;
   overflow: hidden;
   font-family: 'Oswald';
-border-bottom: 3px solid black;}
+  border-bottom: 3px solid black;}
 
 main {
   height: 100vh;
@@ -65,12 +65,9 @@ header h3 {
 }
 
 @keyframes strzalka {
-0% {bottom: 10.8%}
-50% {bottom: 9.5%}
-100% {bottom: 10.8%}
-}
-
-
+  0% {bottom: 10.8%}
+  50% {bottom: 9.5%}
+  100% {bottom: 10.8%}}
 
 @media (orientation: portrait) { /* tekst do drugiej linii */
   hgroup h3 span::after {
