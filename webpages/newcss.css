@@ -64,7 +64,7 @@ main {
       z-index: 1;
       height: 100vh;
       width: 30%;
-      opacity: 0.34;
+      opacity: 0.7;
       transition: left 1.5s;}
 
 main:hover{
@@ -78,8 +78,27 @@ h1 {
   text-shadow: 4px 4px 16px red;
   border: 1px solid red;}
 
-.kwad1{
+.kwad1,.kwad2,.kwad3 {
+  position: absolute;
   width: 13vh;
   height: 13vh;
   border: 2px solid rgba(0, 0, 0,0.4);
-  background-color: rgba(184, 182, 182,1)}
+  background-color: rgba(92, 92, 92,1);
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 12vh;}
+
+.kwad1{  top: 15%;
+  left: 22%;
+  transform: translate(-50%,-50%)}
+
+.kwad2{
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%,-50%);}
+
+.kwad3{
+  top: 15%;
+  left: 78%;
+  transform: translate(-50%,-50%);}
