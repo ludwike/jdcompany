@@ -78,7 +78,7 @@ h1 {
   text-shadow: 4px 4px 16px red;
   border: 1px solid red;}
 
-.kwad1,.kwad2,.kwad3 {
+.kwad1,.kwad2,.kwad3,.kwad4,.kwad5,.kwad6,.kwad7,.kwad8,.kwad9 {
   position: absolute;
   width: 13vh;
   height: 13vh;
@@ -86,12 +86,13 @@ h1 {
   background-color: rgba(92, 92, 92,1);
   color: white;
   text-align: center;
-  text-transform: uppercase;
   line-height: 12vh;}
 
 .kwad1{  top: 15%;
   left: 22%;
-  transform: translate(-50%,-50%)}
+  transform: translate(-50%,-50%);
+  border: 2px solid rgba(4, 0, 255,0.4);
+  background-color: rgba(0, 255, 251,1);}
 
 .kwad2{
   top: 15%;
@@ -102,3 +103,42 @@ h1 {
   top: 15%;
   left: 78%;
   transform: translate(-50%,-50%);}
+
+  .kwad4{  top: 32%;
+    left: 22%;
+    transform: translate(-50%,-50%)}
+
+  .kwad5{
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%,-50%);}
+
+  .kwad6{
+    top: 32%;
+    left: 78%;
+    transform: translate(-50%,-50%);}
+
+    .kwad7{  top: 49%;
+      left: 22%;
+      transform: translate(-50%,-50%)}
+
+    .kwad8{
+      top: 49%;
+      left: 50%;
+      transform: translate(-50%,-50%);}
+
+    .kwad9{
+      top: 49%;
+      left: 78%;
+      transform: translate(-50%,-50%);}
+
+a,a:hover,a:link,a:visited{
+  position: relative;
+  color:black;
+  text-decoration: none;
+  transform: rotate(-45deg);
+}
+
+header#hd2 {
+  height: 100vh;
+}
