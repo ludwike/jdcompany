@@ -1,0 +1,40 @@
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color:black;
+}
+h1 {
+  color:white;
+  font-family: Verdana;
+  font-size: 250%;
+  text-align: center;
+}
+div {
+  height: 100px;
+  width: 100px;
+  background-color: pink;
+}
+ button#glowny{
+  outline: 0;
+  user-select: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  background-color: black;
+  border:2px solid #f44336;
+  height: 100px;
+  width: 300px;
+  font-weight:;
+  font-size: 170%;
+  cursor: pointer;
+  color: white;
+  border-radius: 100px;
+  transition-duration: 0.4s;
+  animation-duration:
+}
+#glowny:hover {
+  background-color: #f44336;
+  color: black;}
