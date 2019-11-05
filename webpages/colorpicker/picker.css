@@ -10,11 +10,7 @@ h1 {
   font-size: 250%;
   text-align: center;
 }
-div {
-  height: 100px;
-  width: 100px;
-  background-color: pink;
-}
+
  button#glowny{
   outline: 0;
   user-select: none;
@@ -32,9 +28,14 @@ div {
   cursor: pointer;
   color: white;
   border-radius: 100px;
-  transition-duration: 0.4s;
-  animation-duration:
+  display: none; /* zmienić */
 }
+
 #glowny:hover {
   background-color: #f44336;
   color: black;}
+
+#s2 {
+  display: block; /* ZMIENIC!! */
+  color: red;
+}
