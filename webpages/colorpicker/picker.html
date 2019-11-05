@@ -16,35 +16,37 @@
 <section id="s2">
 <div id="pojemnik">
 <div id="lewy">
-<h1>color_picker</h1></div>
+<h1 id="h1">color_picker</h1></div>
 <div id="main">
   <img id="pick" alt="colorpickerXDD">
   <table>
   <form>
-  <tr><th>Selektor : </th><th><input type="text" placeholder="P" list="selektory"></th></tr>
+  <tr><th>Selektor : </th><th><input id="war1" type="text" placeholder="P" list="selektory"></th></tr>
   <datalist id="selektory">
     <option value="p">
     <option value="#main">
     <option value="#lewy">
     <option value="h1">
-  <tr><th>Atrybut : </th><th><input type="text" placeholder="Size" list="atrybuty"></th></tr>
+  <tr><th>Atrybut : </th><th><input id="war2" type="text" placeholder="Size" list="atrybuty"></th></tr>
   <datalist id="atrybuty">
     <option value="color">
     <option value="background-color">
     <option value="font-family">
     <option value="height">
     <option value="width">
-  <tr><th>Parametr: </th><th><input type="text" placeholder="#FFFFFF lub np. Arial" list="parametry"></th></tr>
+  <tr><th>Parametr: </th><th><input id="war3" type="text" placeholder="#FFFFFF lub np. Arial" list="parametry"></th></tr>
   <datalist id="parametry">
     <option value="#e144f2">
     <option value="lime">
     <option value="Helvetica">
     <option value="250px">
-    <tr><th><input class="buz" type="reset"></th><th><button class="buz" onClick="zaladuj()">Zaladuj</button><th></tr>
+    <tr><th><input class="buz" type="reset"></th><th><button  onClick="zaladuj()" class="buz"><th></tr>
 </form>
 </table>
+<button class="buz" onClick="zaladuj()">
 </div>
 </div>
+
 </section>
 
   </body>
