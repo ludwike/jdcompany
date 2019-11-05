@@ -14,7 +14,37 @@
   <body>
     <button onClick="wlaczanie()" id="glowny">Color picker</button>
 <section id="s2">
-  <p> jd</p>
+<div id="pojemnik">
+<div id="lewy">
+<h1>color_picker</h1></div>
+<div id="main">
+  <img id="pick" alt="colorpickerXDD">
+  <table>
+  <form>
+  <tr><th>Selektor : </th><th><input type="text" placeholder="P" list="selektory"></th></tr>
+  <datalist id="selektory">
+    <option value="p">
+    <option value="#main">
+    <option value="#lewy">
+    <option value="h1">
+  <tr><th>Atrybut : </th><th><input type="text" placeholder="Size" list="atrybuty"></th></tr>
+  <datalist id="atrybuty">
+    <option value="color">
+    <option value="background-color">
+    <option value="font-family">
+    <option value="height">
+    <option value="width">
+  <tr><th>Parametr: </th><th><input type="text" placeholder="#FFFFFF lub np. Arial" list="parametry"></th></tr>
+  <datalist id="parametry">
+    <option value="#e144f2">
+    <option value="lime">
+    <option value="Helvetica">
+    <option value="250px">
+    <tr><th><input class="buz" type="reset"></th><th><button class="buz" onClick="zaladuj()">Zaladuj</button><th></tr>
+</form>
+</table>
+</div>
+</div>
 </section>
 
   </body>

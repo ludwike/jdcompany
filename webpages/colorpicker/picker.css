@@ -28,7 +28,7 @@ h1 {
   cursor: pointer;
   color: white;
   border-radius: 100px;
-  display: none; /* zmienić */
+  display: none; /* zmienić 2342342342*/
 }
 
 #glowny:hover {
@@ -36,6 +36,68 @@ h1 {
   color: black;}
 
 #s2 {
-  display: block; /* ZMIENIC!! */
-  color: red;
+  display: block; /* ZMIENIC!!4r234234234 */
+}
+#pojemnik{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+#lewy {
+  position: relative;
+  height: 500px;
+  width: 50px;
+  background-color: blue;
+  float:right;
+  z-index: 2;
+  float: left;
+}
+
+h1 {
+  transform: rotate(90deg);
+  text-transform: uppercase;
+  font-family: Verdana;
+  font-weight: bold;
+  color: rgb(174, 242, 193);
+  font-size: 34px;
+}
+#main {
+  float: left;
+  border: 0px solid rgba(255,255,255,0.3);
+  position: relative;
+  height: 500px;
+  width: 300px;
+  background-color: rgb(196, 239, 255);
+  color: black;
+  font-family: Verdana;
+}
+#pick { /* to obrazek kurwa */
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 175px;
+  width: 175px;
+  position: absolute;
+  color: green;
+  border: 1px solid black;
+  font-size: 25px;
+  overflow: hidden;
+  text-transform: rotate(45deg);
+}
+th {
+  font-weight: normal;
+}
+table {
+  text-align: right;
+}
+
+.buz { /* klasa dla dwóch przycisków tzn inputow JD */
+  background-color: rgba(30,144,255,0.65); /* dodgerblue */
+  border: 0;
+  cursor: pointer;
+  height: 25px;
+  width: 75px;
+  border: 2px inset black;
+
 }
