@@ -1,6 +1,6 @@
   body {
     width: 99%;
-    height: 700px;
+    height: 90vh;
     font-family:Verdana;
     background-color:black;
     text-align: center;
@@ -11,12 +11,21 @@
     font-size: 250%;
     line-height: 0.1cm}
 
-  a {text-decoration: none;}
-  a:link,a:visited {color: #FFCBEF;}
-  a:hover {color: #FFFF00;}
+  a {
+    text-decoration: none;}
 
-  /*#s1 div */ p {color:#EE82EE}
-  #s2stare {display: none;}
+  a:link,a:visited {
+    color: #FFCBEF;}
+
+  a:hover {
+    color: #FFFF00;}
+
+  p {
+    color: #EE82EE;
+  }
+
+  #s2stare {
+    display: none;}
 
 footer {
   text-decoration: none;
@@ -27,4 +36,30 @@ footer {
   line-height: 0.1cm;
   font-size: 14px;
   color:#EE82EE;}
-footer p.jd {color:red}
+footer p.jd {
+  color:red
+}
+
+@media (min-width: 331px) and (max-width: 425px) { /* rozmiar Mobile L */
+h1 {
+  font-size: 4rem;
+}
+p.a {
+  font-size: 1.7rem;
+}
+a{
+  font-size: 1.1rem;
+}
+
+footer {
+  font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+}
