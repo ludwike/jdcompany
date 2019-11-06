@@ -41,6 +41,12 @@ footer p.jd {
 }
 
 @media (min-width: 331px) and (max-width: 425px) { /* rozmiar Mobile L */
+body {
+  height: 88.5vh;
+}
+footer {
+  height: 11.5vh;
+}
 h1 {
   font-size: 4rem;
 }
@@ -54,10 +60,13 @@ a{
 footer {
   font-size: 1rem;
 }
-
-
-
-
+a {
+  font-style: italic;
+}
+a.respo {
+  font-style: normal;
+  color: #ff8cdd;
+}
 
 
 
