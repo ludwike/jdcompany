@@ -1,11 +1,11 @@
-  body {
-    width: 99%;
-    height: 700px;
-    font-family:Verdana;
-    background-color:black;
-    text-align: center;
-    color: white;
-    }
+body {
+  width: 99vw;
+  height: 700px;
+  font-family:Verdana;
+  background-color:black;
+  text-align: center;
+  color: white;
+  }
 
   H1 {
     font-size: 250%;
@@ -27,18 +27,19 @@
   #s2stare {
     display: none;}
 
-footer {
-  text-decoration: none;
-  bottom:0;
-  width:99%; /*taki center */
-  position:absolute;
-  text-align: center;
-  line-height: 0.1cm;
-  font-size: 14px;
-  color:#EE82EE;}
-footer p.jd {
-  color:red
-}
+    footer {
+      position: absolute;
+      text-decoration: none;
+      bottom:0;
+      vertical-align: middle;
+      width: 99vw;
+      text-align: center;
+      line-height: 0.1cm;
+      font-size: 14px;
+      color:#EE82EE;}
+    footer p.jd {
+      color:red
+    }
 
 @media (min-width: 331px) and (max-width: 425px) { /* rozmiar Mobile L */
 body {
