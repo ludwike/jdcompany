@@ -29,6 +29,7 @@ body {
 
 
 a#graj{
+	text-align: center;
 	user-select: none;
 	outline: none;
 	text-transform: uppercase;
