@@ -17,13 +17,20 @@
 <script>
 function podmien(){
 	poID('stronka').style.display = "block";
-	poID('przycisk').parentNode.removeChild(poID('przycisk'));
+	poID('graj').parentNode.removeChild(poID('graj'));
 }
 </script>
 </head>
 <body onselect="return false" ondragstart="return false" ondrag="return false">
 <div id="menu1">
-	<button id="przycisk" onClick="podmien()">graj</button>
+	<a id="graj" onClick="podmien()">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		zacznij grę ;)
+	</a></div>
+<!--	<button id="przycisk" onClick="podmien()">graj</button> -->
  <section id="stronka">
 <div id="leaderboard" class="leader">
 <!--	<?php

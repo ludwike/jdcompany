@@ -8,22 +8,109 @@
 	--transxd: translate(-50%,+15%);
 }
 html {
+	display: block;
 	position: relative;
 }
 body {
-	background-color: black;
+	background-color: #060802;
 	position: relative;
 }
 
 #menu1{
 	height: 100%;
 	width: 100%;
-	background-color: black;
+	background-color: #060802;
 }
 #stronka{
 	background-color: black;
 }
+
+
+
+
+a#graj{
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	position: relative;
+	transition:  0.2s;
+	overflow: hidden;
+	text-decoration: none;
+	display: inline-block;
+	color: #39FF14;
+	font-size: 48px;
+	top: 50vh;
+	left: 50vw;
+	transform: translate(-50%,-50%);
+	font-family: consolas;
+	padding: 15px 30px;
+}
+ a#graj:hover{
+	color: black;
+	background: #39FF14;
+	box-shadow: 	0 0 40px #39FF14, 0 0 40px #39FF14, 0 0 80px #39FF14;
+	transition-delay: 1s; }
+ a#graj span {
+	 position: absolute;
+	 display: block;}
+
+ a#graj span:nth-child(1){
+	 top: 0;
+	 left: -100%;
+	 width: 100%;
+	 height: 2px;
+	 background: linear-gradient(90deg,transparent,#39FF14);}
+
+	 a#graj:hover span:nth-child(1){
+		 left: 100%;
+		 transition: 1s;
+	 }
+
+	 a#graj span:nth-child(3){
+		bottom: 0;
+		right: -100%;
+		width: 100%;
+		height: 2px;
+		background: linear-gradient(270deg,transparent,#39FF14);}
+
+		a#graj:hover span:nth-child(3){
+			right: 100%;
+			transition: 1s;
+			transition-delay: 0.5s}
+
+	a#graj span:nth-child(2){
+		 	 top: -100%;
+		 	 right: 0%;
+		 	 width: 2px;
+		 	 height: 100%;
+		 	 background: linear-gradient(180deg,transparent,#39FF14);}
+
+		 	 a#graj:hover span:nth-child(2){
+		 		 top: 100%;
+		 		 transition: 1s;
+				 transition-delay: 0.25s;
+		 	 }
+
+			 a#graj span:nth-child(4){
+	 			 	 bottom: -100%;
+	 			 	 left: 0;
+	 			 	 width: 2px;
+	 			 	 height: 100%;
+	 			 	 background: linear-gradient(360deg,transparent,#39FF14);}
+
+	 			 	 a#graj:hover span:nth-child(4){
+	 			 		 bottom: 100%;
+	 			 		 transition: 1s;
+	 					 transition-delay: 0.75s;
+	 			 	 }
+
+
+
+
 #przycisk{
+/*	position: absolute;
+	top: 50vh;
+	left: 50vw;
+	transform: translate(-50%,-50%);
 	color: black;
 	font-size: 20px;
 	border: none;
@@ -31,7 +118,7 @@ body {
 	background: linear-gradient(45deg,rgb(1,178,255),rgb(83,131,233));
 	top: 50vh;
 	left: 50vw;
-	transform: translate(-50%,-100%);
+	transform: translate(-50%,-50%);
 	position: absolute;
 	height: 180px;
 	width: 180px;
@@ -42,7 +129,7 @@ body {
 	text-transform: uppercase;
 	font-size: 30px;
 	letter-spacing: 5px;
-	font-weight: none;
+	font-weight: none; */
 }
 #przycisk:hover{
 
