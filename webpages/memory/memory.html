@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	  <meta name="viewport" content="width-device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><!-- responsywnosc by adam -->
+	<meta charset="utf-8"> 	<script type ="text/javascript" src="js/dsbib.js"></script>
+	<script type ="text/javascript" src="js/js_start.js"></script>
+	<link rel="stylesheet" href="css/jd2.css">
+	<title>Memory</title>
+	<!--
+	Authors:
+	- Dawid S. (js,php,sql)
+	- Adam M. (html,css)
+	- Alicja C. (graphics)
+	-
+	-->
+<script>
+function podmien(){
+	poID('stronka').style.display = "block";
+	poID('przycisk').parentNode.removeChild(poID('przycisk'));
+}
+</script>
+</head>
+<body onselect="return false" ondragstart="return false" ondrag="return false">
+<div id="menu1">
+	<button id="przycisk" onClick="podmien()">graj</button>
+ <section id="stronka">
+<div id="leaderboard" class="leader">
+<!--	<?php
+	$db = new mysqli("localhost","root","a12345","memory");
+
+	$sql = "SELECT nick, wynik FROM gracze ORDER BY wynik ASC LIMIT 5;";
+	$result = $db->query($sql);
+
+	if ($result->num_rows > 0) {
+		echo "<ol>";
+		while ($row = = mysqli_connect('localhost','root','a12345','memory');
+	$sql = "SELECT nick, wynik FROM gracze";
+	$output = mysqli_query($db,$sql);
+	$output = mysqli_fetch_array($output);
+	// print_r($output);
+	echo $output;
+	// echo '<br><br><br>';
+	// foreach ($output as $wartosc) {
+	// 	//echo $index;
+	// 	//echo $wartosc.'<br>';
+	// 	echo print_r($wartosc).', ';
+	// }
+
+	mysqli_close($db);*/
+	?>
+                        -->
+<h1> LEADERBOARD </h1>
+ <table>
+ <ol>
+<li class="nick">xdd <li class="wynik">5</li><br>
+<li class="nick">sfsd <li class="wynik">45</li><br>
+<li class="nick">gjfgj <li class="wynik">35</li><br>
+<li class="nick">s <li class="wynik">35</li><br>
+<li class="nick">asdas <li class="wynik">526</li><br>
+<li class="nick">hl <li class="wynik">234</li><br>
+<li class="nick">sdfs <li class="wynik">2</li><br>
+<li class="nick">dfdfdf <li class="wynik">34</li><br>
+<li class="nick">ggggggg <li class="wynik">324</li><br>
+<li class="nick">test <li class="wynik">43</li><br>
+ </ol>
+</table>
+</div>
+<div id="main" class="glowny">
+<!-- <img id="1"  class="a" src="karty/gotowe/tlo.png" height="150" width="100">
+<img id="2"  class="b" src="karty/gotowe/tlo.png" height="150" width="100">
+<img id="3"  class="c" src="karty/gotowe/tlo.png" height="150" width="100">
+<img id="4"  class="d" src="karty/gotowe/tlo.png" height="150" width="100">
+<img id="5"  class="e" src="karty/gotowe/tlo.png" height="150" width="100">
+<img id="6"  class="f" src="karty/gotowe/tlo.png" height="150" width="100">
+<img id="7"  class="g" src="karty/gotowe/tlo.png" height="150" width="100">
+<img id="8"  class="h" src="karty/gotowe/tlo.png" height="150" width="100">
+<img id="9"  class="i" src="karty/gotowe/tlo.png" height="150" width="100">
+<img id="10" class="j" src="karty/gotowe/tlo.png" height="150" width="100">
+<img id="11" class="k" src="karty/gotowe/tlo.png" height="150" width="100">
+<img id="12" class="l" src="karty/gotowe/tlo.png" height="150" width="100">
+<img id="13" class="m" src="karty/gotowe/tlo.png" height="150" width="100">
+<img id="14" class="n" src="karty/gotowe/tlo.png" height="150" width="100">
+<img id="15" class="o" src="karty/gotowe/tlo.png" height="150" width="100">
+<img id="16" class="p" src="karty/gotowe/tlo.png" height="150" width="100"> -->
+</div>
+<div id="logo1" class="logomo"></div>
+<form id="form" method="post" action="php/dodaj.php" class="hidden">
+	<input id="a" type="text" name="nazwa">
+	<input id="b" type="number" name="ilosc">
+</form>
+
+<div id="footer">
+<p><span class="dd">dawid "sója",</span><span class="aa"> adam "ludwike",</span><span class="ac"> alicja "caps",</span><span class="bb"> błażej "błaszko",</span></p>
+</div>
+<script src="js/js_end.js"></script>
+</section>
+</body>
+
+
+
+</html>
