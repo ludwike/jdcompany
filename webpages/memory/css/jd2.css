@@ -160,7 +160,7 @@ li.wynik {
 
 }
 div.logomo {
-	display: none;}
+display: none;}
 
 div#footer{
 	display: none;}
@@ -168,18 +168,24 @@ div#footer{
 div.glowny{
 height: 100vh;
 width: 100vw;
-position: relative;
+position: absolute;
 top: 0;
 left: 0;
-transform: translate(0,0);
-}
+transform: translate(0,0);}
+
 img {
 height: 24.8vh;
 width: 24.7vw;
 }
 
 div.leader{
-	display: none;}
+	display: block;
+	height: 100vh;
+	width: 100vw;
+	top: 100vh;
+	left: 0;
+	transform: translate(0,0);
+	float: left;}
 
 
 
