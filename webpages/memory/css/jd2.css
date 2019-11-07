@@ -29,6 +29,8 @@ body {
 
 
 a#graj{
+	user-select: none;
+	outline: none;
 	text-transform: uppercase;
 	letter-spacing: 4px;
 	position: relative;
