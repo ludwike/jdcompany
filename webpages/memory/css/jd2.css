@@ -1,0 +1,186 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	border: 0 solid black;
+	--wysokosc: 604px; /* zjebany border ma wplyw */
+	--szerokosc: 404px; /* tu też */
+	--transxd: translate(-50%,+15%);
+}
+html {
+	position: relative;
+}
+body {
+	background-color: black;
+	position: relative;
+}
+
+#menu1{
+	height: 100%;
+	width: 100%;
+	background-color: black;
+}
+#stronka{
+	background-color: black;
+}
+#przycisk{
+	color: black;
+	font-size: 20px;
+	border: none;
+	text-decoration: none;
+	background: linear-gradient(45deg,rgb(1,178,255),rgb(83,131,233));
+	top: 50vh;
+	left: 50vw;
+	transform: translate(-50%,-100%);
+	position: absolute;
+	height: 180px;
+	width: 180px;
+	border: 0px solid black;
+	border-radius: 45%;
+	display: block;
+	font-family: Verdana;
+	text-transform: uppercase;
+	font-size: 30px;
+	letter-spacing: 5px;
+	font-weight: none;
+}
+#przycisk:hover{
+
+
+}
+#stronka {
+	display: none;
+}
+div.leader {
+	height: calc(var(--wysokosc));
+	width: calc(var(--szerokosc));
+	position: absolute;
+	border: 2px solid orange;
+	top: 50%;
+	left: 17.5%;
+	transform: var(--transxd);
+	background-color: grey;
+	padding-left:1em;
+	font-size:2rem;
+}
+.wynik{
+	text-align:right;
+}
+div.glowny {
+	top: 50%; /* poprawic */
+	left: 50%; /* pop */
+	transform: var(--transxd);
+	height: calc(var(--wysokosc));
+	width: calc(var(--szerokosc));
+	position: absolute;
+ 	border: 2px solid red;
+}
+
+div.logomo {
+	background-color: grey;
+	height: calc(var(--wysokosc));
+	width: calc(var(--szerokosc));
+	position: absolute;
+	border: 2px solid blue;
+	top: 50%;
+	left: 82.5%;
+	transform: var(--transxd);
+}
+
+img {
+	float: left;
+	height: 150px;
+	width: 100px;
+	position: relative;
+	border: 1px solid pink;
+	display: block;
+}
+
+.hidden{
+	display: none;
+}
+
+#footer {
+	position: absolute;
+	width: 90vw;
+	height: 50px;
+	background-color: grey;
+	vertical-align: middle;
+	border: 2px solid yellow;
+	text-align: center;
+	font-family: Verdana;
+	font-size: 20px;
+	color: gold;
+	text-transform: uppercase;
+	line-height: 40px;
+	text-align: center;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,90vh);
+	z-index: 2;
+	/*opacity:30%;  Alicja  */
+}
+h1 {
+	position: relative;
+	font-size: 30px;
+	text-align: center;
+left: -2%;
+}
+li {
+	display: inline;
+}
+li.nick {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+}
+li.wynik {
+	position: absolute;
+	right: 3%;
+}
+
+
+
+.dd {
+	color: lime;
+}
+.aa{
+	color: cyan; /* dodgerblue */
+}
+.ac{
+	color:orange;
+}
+.bb{
+	color: red;
+}
+
+@media (min-width: 331px) and (max-width: 425px) {
+#przycisk{
+	transform: translate(-50%,-50%);
+
+}
+div.logomo {
+	display: none;}
+
+div#footer{
+	display: none;}
+
+div.glowny{
+height: 100vh;
+width: 100vw;
+position: relative;
+top: 0;
+left: 0;
+transform: translate(0,0);
+}
+img {
+height: 24.8vh;
+width: 24.7vw;
+}
+
+div.leader{
+	display: none;}
+
+
+
+}
