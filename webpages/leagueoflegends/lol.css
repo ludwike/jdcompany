@@ -18,7 +18,7 @@ body {
   margin: 0;
 }
 
-#s1 div{
+#s1 div#baner{
   display: block;
   overflow: hidden;
   height: 50px;
@@ -39,7 +39,16 @@ body {
   height: 50px;
   width: 50px;
   display: block;
-  float:left;}
+  float:left;
+  position: absolute;
+  z-index: 2;}
+
+#s1 div a.icon img{
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
 
 #s1 div a:visited,a:link{
   color: var(--zloty);
@@ -227,11 +236,104 @@ transform: translate(-50%);
 #s2 div#ramka ul li#ikon4 a,
 #s2 div#ramka ul li#ikon4:before,
 #s2 div#ramka ul li#ikon4:after
-{background: linear-gradient(45deg,#89ff00,#00bcd4);
+{
+  background: linear-gradient(45deg,#89ff00,#00bcd4);
   font-family: obelix;
-font-size: 34px;
+  font-size: 34px;
 }
 
 #s2 div#ramka ul li a:hover #s2 div h2{
+
+}
+
+
+@media (min-width: 300px) and (max-width: 425px) {
+
+#s1 div#baner{
+  height: 40px;
+  width: 100vw;
+}
+#s1 div#baner ul{
+  display: none;
+}
+
+#s1 div a.icon img{
+  position: relative;
+  left: 20px;
+  top: 20px;
+  transform: translate(-50%,-50%);
+}
+
+#s1 div #nick,#nick2,#nick3 {
+  width: 15vw;
+  height: 20px;
+  top: 21px;}
+
+#s1 div  #nick {
+  width: 15vw;
+  left: calc(49vw - 17.5vw - 7.5vw);
+  transform: translate(-50%,-50%);
+  z-index: 2;}
+
+#s1 div #nick2 {
+  width: 35vw;
+  left: calc(50vw);
+  transform: translate(-50%,-50%);
+  z-index: 2;}
+
+#s1 div  #nick3 {
+  top: 21px;
+  width: 15vw;
+  height: 24px;
+  left: calc(51vw + 17.5vw + 7.5vw);
+  transform: translate(-50%,-50%);}
+
+#s2 #nazwa {
+  font-size: 5vh;
+}
+#s2 div#glowny{
+  height: calc(100vh - 42px)
+}
+#s2 div#glowny #ramka{
+  min-height: 50vh;
+  height: calc(90vh - 35px - 5vh - 50px);
+  width: 80vw;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  }
+  #s2 div#ramka ul{
+    margin: 0;
+    padding: 0;
+    display: block;
+    float: left;
+  }
+  #s2 div#ramka ul li{
+    width: 30vw;
+    height: 30vw;
+    margin: 0 10px;
+    border-radius: 50%;
+  }
+  #s2 div#ramka ul li a{
+        line-height: 180px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    font-size: 4vh;}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
