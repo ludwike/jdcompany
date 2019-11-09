@@ -1,0 +1,73 @@
+/* SECTION 1 TO POLE DO PODMIANKI ZIELONEGO TLA, SECTION 2 ZAWIERA
+WSZYSTKIE STRONKI DO PODMIANEK */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#kontener {
+height: 100vh;
+}
+table, tr, th {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+#gornyblok {
+    border-top: 2px solid black;
+}
+#gornyblok, #dolnyblok {
+  position: relative;
+  width: 100vw;
+  height: 7.5vh;
+  text-transform: uppercase;
+  font-family: arial;
+  font-size: 2.7vh;
+}
+#gornyblok th,#dolnyblok th{
+  width: 33.33%;
+}
+#glowny{
+position: relative;
+width: 100vw;
+height: 85vh;
+}
+#dolnyblok {
+width: 100vw;
+height: 7.5vh;
+bottom: 0;
+}
+
+/* KOLORKI */
+.lewo {
+  background-color: #ff8800;
+}
+.srodek {
+  background-color: #bb00ff;
+}
+.prawo {
+  background-color: #21bcff;
+
+}
+#glowny {
+  background-color: #00bf00;
+}
+.lewodol {
+  background-color: #4d85ff;
+}
+.srodekdol {
+  background-color: #ff2121;
+
+}
+.prawodol {
+  background-color: #e9ed00;
+}
+/* PANELE */
+
+#s2 {
+  display: none;
+}
+#kody {
+  position: relative;
+  top: 5px;
+}

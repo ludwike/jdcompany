@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="jscss.css">
+    <script src="jsjs.js"></script>
+    <meta name="viewport" content="width-device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="utf-8">
+    <title>JavaScriptGame</title>
+  </head>
+  <body onLoad="loadmoney()">
+  <div id="kontener">
+    <table id="gornyblok">
+    <tr>
+    <th class="lewo" onClick="">lewo</th>
+    <th class="srodek" onClick="document.getElementById('glowny').innerHTML = document.getElementById('s1menu').innerHTML;">menu</th>
+    <th id="jd" class="prawo" onClick="document.getElementById('glowny').innerHTML = document.getElementById('kody').innerHTML;">kody</th>
+    </tr>
+    </table>
+    <div id="glowny">
+    <section id="s1">
+          <p onClick="czekaj(30)"> Witaj w grze JavaScript!</p>
+    </section>
+    </div>
+
+   <table id="dolnyblok">
+    <tr>
+    <th class="lewodol">dol</th>
+    <th class="srodekdol">graj</th>
+    <th class="prawodol"><p id="pln">kurwa</p></th>
+    </tr>
+    </table>
+  </div>
+
+
+
+
+
+
+  <section id="s2">
+    <section id="s1menu">
+            <p onClick="czekaj()"> Witaj w grze JavaScript!</p>
+    </section>
+
+
+
+    <section id="kody">
+    <p onClick="darmowepln()"> Kliknij aby odebrac darmowe 10$!</p>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+  </body>
+</html>
