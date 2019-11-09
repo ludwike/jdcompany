@@ -49,7 +49,7 @@ bottom: 0;
   background-color: #21bcff;
 
 }
-#glowny {
+#glowny,#kody {
   background-color: #00bf00;
 }
 .lewodol {
@@ -67,7 +67,36 @@ bottom: 0;
 #s2 {
   display: none;
 }
-#kody {
+#kody{
+  background-color: #EEEEEE;
+  display: none;
   position: relative;
-  top: 5px;
+  width: 100vw;
+  height: 85vh;}
+
+#kody table{
+  width: 100vw;
 }
+#kody table th.a{
+  background-color: #b5b5b5;
+  width: 75vw;
+  height: 40px;
+}
+#kody table th.b{
+  width: 25vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+x {}

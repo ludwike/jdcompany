@@ -5,21 +5,31 @@
     <script src="jsjs.js"></script>
     <meta name="viewport" content="width-device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta charset="utf-8">
-    <title>JavaScriptGame</title>
+    <title>v0.001</title>
   </head>
-  <body onLoad="loadmoney()">
+  <body onLoad="ladowaniezmiennych();">
   <div id="kontener">
     <table id="gornyblok">
     <tr>
     <th class="lewo" onClick="">lewo</th>
-    <th class="srodek" onClick="document.getElementById('glowny').innerHTML = document.getElementById('s1menu').innerHTML;">menu</th>
-    <th id="jd" class="prawo" onClick="document.getElementById('glowny').innerHTML = document.getElementById('kody').innerHTML;">kody</th>
+    <th class="srodek" onClick="changekodymenu( )">menu</th>
+    <th id="jd" class="prawo" onClick="changemenukody()">kody</th>
     </tr>
     </table>
+
     <div id="glowny">
-    <section id="s1">
-          <p onClick="czekaj(30)"> Witaj w grze JavaScript!</p>
-    </section>
+          <p> Witaj w grze JavaScript!</p>
+    </div>
+
+    <div id="kody">
+      <table>
+        <tr>
+          <th class="a">Kliknij aby odebrac darmowe 10$!</th>
+          <th id="odbierz1" class="b" onClick="darmowepln()">
+            ???
+          </th>
+        </tr>
+      </table>
     </div>
 
    <table id="dolnyblok">
@@ -36,21 +46,19 @@
 
 
 
-  <section id="s2">
+<!--  <section id="s2">
     <section id="s1menu">
-            <p onClick="czekaj()"> Witaj w grze JavaScript!</p>
+            <p> Witaj w grze JavaScript!</p>
     </section>
 
 
 
     <section id="kody">
+    <table>
+    <tr><th>xdd</th><th>xddd</th></tr>
+    </table>
     <p onClick="darmowepln()"> Kliknij aby odebrac darmowe 10$!</p>
-    </section>
-
-
-
-
-
+  </section> -->
 
 
 
