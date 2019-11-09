@@ -6,14 +6,22 @@
     <meta name="viewport" content="width-device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta charset="utf-8">
     <title>v0.001</title>
+<!--
+Stworzyl Adam "Ludwike"
+Changelog
+08-11-2019 - created
+09-11-2019 - v0.001 odbieranie pieniedzy
+
+-->
   </head>
   <body onLoad="ladowaniezmiennych();">
   <div id="kontener">
+
     <table id="gornyblok">
     <tr>
-    <th class="lewo" onClick="">lewo</th>
-    <th class="srodek" onClick="changekodymenu( )">menu</th>
-    <th id="jd" class="prawo" onClick="changemenukody()">kody</th>
+    <th class="lewo" onClick='idzdo = "glowny",przejscie(idzdo)'>lewo</th>
+    <th class="srodek" onClick='idzdo = "glowny",przejscie(idzdo)'>menu</th>
+    <th class="prawo" onClick='idzdo = "kody",przejscie(idzdo)'>kody</th>
     </tr>
     </table>
 
@@ -31,12 +39,18 @@
         </tr>
       </table>
     </div>
+    <div id="gry" onClick="idzdo = 5">
+    </div>
+
+    <div id="graj">
+
+    </div>
 
    <table id="dolnyblok">
     <tr>
-    <th class="lewodol">dol</th>
-    <th class="srodekdol">graj</th>
-    <th class="prawodol"><p id="pln">kurwa</p></th>
+    <th class="lewodol" onClick='idzdo = "kody",przejscie(idzdo)'>dol</th>
+    <th class="srodekdol" onClick='idzdo = "graj",przejscie(idzdo)'>graj</th>
+    <th class="prawodol" onClick='idzdo = "kody",przejscie(idzdo)'><p id="pln">???</p></th>
     </tr>
     </table>
   </div>
