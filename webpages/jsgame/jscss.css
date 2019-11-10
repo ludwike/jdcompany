@@ -116,6 +116,20 @@ bottom: 0;
   width: 100vw;
   height: 85vh;
 }
+#kasyno table th{
+  width: 50vw;
+  height: 21.25vh;
+}
+#kasyno table th.a{
+}
+
+#coinflip {
+  background-color: #4ccf51;
+  display: none;
+  position: relative;
+  width: 100vw;
+  height: 85vh;
+}
 
 
 
@@ -135,3 +149,51 @@ bottom: 0;
 
 
 * {}
+
+
+/*
+<div id="pudelko">
+  <div id="karta">
+    <div id="przod"><img src="kxx.png"></div>
+    <div id="tyl">LEW</div>
+  </div>
+
+#pudelko {
+  position: relative;
+  width:180px;
+  height:240px;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%,-120%);
+  border:3px solid #000;
+  background-color:#FDD700;
+  perspective:300px;
+}
+
+#karta {
+  position:relative;
+  width:100%;
+  height:100%;
+  background-color:#EEE;
+  text-align:center;
+  transition:1s;
+  transform-style:preserve-3d;
+}
+#przod{
+  position:absolute;
+  backface-visibility:hidden;
+  height:100%;
+  width: 100%;
+}
+#tyl{
+  position:absolute;
+  transform:rotateY(180deg);
+  backface-visibility:hidden;
+  width:100%;
+  height:100%;
+  line-height:15vh;
+
+}
+#pudelko:hover > #karta {
+  transform:rotateY(180deg);
+} */
