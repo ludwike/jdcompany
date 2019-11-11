@@ -35,6 +35,10 @@ width: 100vw;
 height: 7.5vh;
 bottom: 0;
 }
+#dolnyblok tr th.prawodol img {
+vertical-align: middle;
+height: 50%
+}
 
 /* KOLORKI */
 .lewo {
@@ -119,6 +123,7 @@ bottom: 0;
   height: 21.25vh;
 }
 #kasyno table th.a{
+background-color: #9d03fc;
 }
 /* COIN FLIP CSS COIN FLIP CSS COIN FLIP CSS */
 #coinflip {

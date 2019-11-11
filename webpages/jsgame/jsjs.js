@@ -7,9 +7,8 @@ var obstawieniekomputer = null;
 var stawka = 0;
 var teststawka = 0;
 
-setInterval("console.clear()",4999);
 setInterval("ladowaniezmiennych();",1000);
-setInterval("czekaj();",1000);
+setInterval("czekanie();",1000);
 
 // SKROTY FUNKCJI I KOMEND
 function poID(id){
@@ -18,7 +17,7 @@ function konsola(text){
     return console.log(text)}
 
 // LADOWANIE I PODSTAWOWE FUNKCJE!!!
-function czekaj(){
+function czekanie(){
   // sprawdzanie odbioru pieniedzy numer 1
   if(ileczekac > 0){
     ileczekac--;
@@ -33,7 +32,7 @@ function czekaj(){
 
 function ladowaniezmiennych(){
   //pieniadze
-  poID('pln').innerHTML = money + "$";
+  poID('pln').innerHTML = money;
   konsola("Stan konta: " + money + "$");
   //odbieranie kasy numer 1 + kolorki
   poID('odbierz1').innerHTML = "Odbierz";
