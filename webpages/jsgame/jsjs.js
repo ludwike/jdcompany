@@ -32,7 +32,7 @@ function czekanie(){
 
 function ladowaniezmiennych(){
   //pieniadze
-  poID('pln').innerHTML = money;
+  poID('pln').innerHTML = money + "$";
   konsola("Stan konta: " + money + "$");
   //odbieranie kasy numer 1 + kolorki
   poID('odbierz1').innerHTML = "Odbierz";
@@ -48,7 +48,7 @@ function przejscie(a){
 // KOLEJNE FUNKCJE
 function darmowepln(){
 if(ileczekac == 0){
-  var darmowyhajs = 10;
+  var darmowyhajs = 50;
   money = money + darmowyhajs;
   ileczekac = 30;
   poID('odbierz1').innerHTML = ileczekac + "s"; // ustawia insant kolor red
