@@ -8,7 +8,7 @@ var teststawka = 0;
 var player = {
   id: 1,
   nick: "Ludwike",
-  money: 3,
+  money: 0,
 }
 
 setInterval("ladowaniezmiennych();",1000);
@@ -23,11 +23,11 @@ function konsola(text){
 // LADOWANIE I PODSTAWOWE FUNKCJE!!!
 function czekanie(){
   // sprawdzanie odbioru pieniedzy numer 1
-  if(ileczekac > 0){
-    ileczekac--;
-    poID('odbierz1').innerHTML = ileczekac + "s";
-    poID('odbierz1').style = "background-color: red";
-    konsola("Pozostało: " + ileczekac + " sekund do darmowej kasy.");
+if(ileczekac > 0){
+  ileczekac--;
+  poID('odbierz1').innerHTML = ileczekac + "s";
+  poID('odbierz1').style = "background-color: red";
+  konsola("Pozostało: " + ileczekac + " sekund do darmowej kasy.");
 }
   else {
     poID('odbierz1').style = "background-color: #00bf00";
@@ -62,7 +62,6 @@ if(ileczekac == 0){
 }
 
 // COINFLIP FUNKCJE
-//
 function obstawiam(a){
   obstawienie = a;
   konsola("Obstawiłeś: " + obstawienie + ".");
@@ -77,7 +76,6 @@ else { //jeżeli to KX ofc.
   obstawienie = 1;
 }
 }
-
 function zmianastawki(a){
   teststawka = stawka + a;
 if(teststawka > player.money){
@@ -103,7 +101,6 @@ function resetstawki(){
   poID('pstawka').innerHTML = stawka + "$";
   konsola('Stawka została zresetowana!');
 }
-
 function zmianastawkix2(){
   teststawka = stawka * 2;
   if(teststawka > player.money){
@@ -117,7 +114,6 @@ else  {
   konsola("Obstawiles: " + stawka + "$");
   poID('pstawka').innerHTML = stawka + "$";}
 }
-
 function zmianastawkiy2(){
   teststawka = stawka / 2;
   if(teststawka > player.money){
@@ -142,7 +138,6 @@ poID('pstawka').innerHTML = stawka + "$";
 konsola('Ustawiles losową stawkę tzn: ' + stawka + "$");
   teststawka = 0;
 }
-
 function cfgraj(){
 if(obstawienie == null || stawka == 0){
   konsola('Musisz ustawić swój typ oraz stawkę!');
@@ -153,7 +148,6 @@ if(obstawieniekomputer == 1){
   poID('obstawienie').innerHTML = "kx";}
 else{
   poID('obstawienie').innerHTML = "jx";}
-
 if(obstawieniekomputer == obstawienie){
   konsola('Wygrales!');
   poID('obstawienie').style = "color: green";
@@ -173,3 +167,9 @@ if(stawka > player.money){
   return;
 }
 }
+// USTAWEINIA USTAWIENIA USTAWEINIA
+function ladowaniereczne(a){
+a;
+konsola(a);
+ }
+// player={id: 1,nick: "Ludwike",money: 3,}
