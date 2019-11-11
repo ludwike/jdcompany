@@ -145,12 +145,12 @@ if(obstawienie == null || stawka == 0){
   konsola('Musisz ustawić swój typ oraz stawkę!');
   return;
 }
+obstawieniekomputer = (Math.floor(Math.random()*2));
 if(obstawieniekomputer == 1){
   poID('obstawienie').innerHTML = "kx";}
 else{
   poID('obstawienie').innerHTML = "jx";}
 
-obstawieniekomputer = (Math.floor(Math.random()*2));
 if(obstawieniekomputer == obstawienie){
   konsola('Wygrales!');
   poID('obstawienie').style = "color: green";
