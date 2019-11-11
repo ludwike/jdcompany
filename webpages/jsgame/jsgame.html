@@ -11,7 +11,7 @@ Stworzyl Adam "Ludwike"
 Changelog
 08-11-2019 - v0.001 - created
 09-11-2019 - v0.002 - odbieranie pieniedzy,funkcja na przejscie,ladowaniezmiennych
-
+11-11-2019 - v0.012 - w pelni dzialajacy coinflip, brak animacji
 
 -->
   </head>
@@ -102,25 +102,62 @@ Changelog
   </div>
 
   <div id="coinflip">
+    <div id="obiekt">
     <table class="a">
-      <tr>
-        <th>x
+      <tr onClick="cfgraj()">
+        <th id="obstawienie">JX<br> CZY<br> KX<br>?
         </th>
       </tr>
     </table>
     <table class="b">
       <tr>
-        <th>a
+        <th onClick="zmianastawki(1)">1
         </th>
-        <th>b
+        <th onClick="zmianastawki(10)">10
         </th>
-        <th>c
+        <th onClick="zmianastawki(100)">100
         </th>
-        <th>d
+        <th onClick="zmianastawki(1000)">1000
         </th>
       </tr>
 
+      <tr>
+        <th onClick="zmianastawki(10000)">10k
+        </th>
+        <th onClick="zmianastawki(100000)">100k
+        </th>
+        <th onClick="zmianastawki(1000000)">1m
+        </th>
+        <th onClick="zmianastawkiall()">all
+        </th>
+      </tr>
+
+      <tr>
+        <th onClick="resetstawki()">0
+        </th>
+        <th onClick="zmianastawkix2()">x2
+        </th>
+        <th onClick="zmianastawkiy2()">/2
+        </th>
+        <th onClick="zmianastawkirandom()">?
+        </th>
+      </tr>
+      </table>
+      <table class="c">
+        <tr>
+          <th id="jx" onClick="obstawiam('jx')">JX
+          </th>
+          <th id="kx" onClick="obstawiam('kx')">KX
+          </th>
+        </tr>
         </table>
+        <table class="d">
+          <tr>
+            <th>Aktualna stawka<p id="pstawka">0$</p>
+            </th>
+          </tr>
+          </table>
+      </div>
 
   </div>
 
@@ -136,24 +173,6 @@ Changelog
     </table>
   </div>
 
-
-
-
-
-
-<!--  <section id="s2">
-    <section id="s1menu">
-            <p> Witaj w grze JavaScript!</p>
-    </section>
-
-
-
-    <section id="kody">
-    <table>
-    <tr><th>xdd</th><th>xddd</th></tr>
-    </table>
-    <p onClick="darmowepln()"> Kliknij aby odebrac darmowe 10$!</p>
-  </section> -->
 
 
 
