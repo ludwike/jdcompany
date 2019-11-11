@@ -18,24 +18,24 @@ Changelog
   <body onLoad="ladowaniezmiennych();">
   <div id="kontener">
 
-    <table id="gornyblok">
-    <tr>
-    <th class="lewo" onClick='idzdo = "ustawienia",przejscie(idzdo)'>ustawienia</th>
-    <th class="srodek" onClick='idzdo = "glowny",przejscie(idzdo)'>menu</th>
-    <th class="prawo" onClick='idzdo = "kody",przejscie(idzdo)'>kody</th>
-    </tr>
+  <table id="gornyblok">
+      <tr>
+        <th class="lewo" onClick='idzdo = "ustawienia",przejscie(idzdo)'>ustawienia</th>
+        <th class="srodek" onClick='idzdo = "glowny",przejscie(idzdo)'>menu</th>
+        <th class="prawo" onClick='idzdo = "kody",przejscie(idzdo)'>kody</th>
+      </tr>
     </table>
 
-<div id="glowny">
+  <div id="glowny">
           <p> Witaj w grze JavaScript!</p>
     </div>
 
 <!-- PANELE PANELE PANELE PANELE PANELE -->
 
-<div id="kody">
+  <div id="kody">
       <table>
         <tr>
-          <th class="a">Kliknij aby odebrac darmowe 10$!</th>
+          <th class="a">Kliknij aby odebrac darmowe 50$!</th>
           <th id="odbierz1" class="b" onClick="darmowepln()">
             ???
           </th>
@@ -43,7 +43,7 @@ Changelog
       </table>
     </div>
 
-<div id="graj">
+  <div id="graj">
       <table>
       <tr>
         <th class="a" onClick='idzdo = "kasyno",przejscie(idzdo)'>kasyno
@@ -71,7 +71,14 @@ Changelog
       </tr>
       </table>
     </div>
+
+  <div id="ustawienia">
+    <span>xd</span><br>
+    <input id="inputload" type="text"></input>
+    </div>
+
 <!-- POD PANELE POD PANELE POD PANELE POD PANELE -->
+
   <div id="kasyno">
     <table>
       <tr>
@@ -98,8 +105,8 @@ Changelog
             <th class="h">
             </th>
           </tr>
-  </table>
-  </div>
+        </table>
+      </div>
 
   <div id="coinflip">
     <div id="obiekt">
@@ -161,17 +168,14 @@ Changelog
 
   </div>
 
-
-
-
-   <table id="dolnyblok">
+  <table id="dolnyblok">
     <tr>
     <th class="lewodol" onClick='idzdo = "kody",przejscie(idzdo)'></th>
     <th class="srodekdol" onClick='idzdo = "graj",przejscie(idzdo)'>graj</th>
     <th class="prawodol" onClick='idzdo = "kody",przejscie(idzdo)'><span id="pln">???</span></th>
     </tr>
-    </table>
-  </div>
+      </table>
+    </div>
 
 
 
@@ -183,5 +187,6 @@ Changelog
 
 
     </section>
+
   </body>
 </html>

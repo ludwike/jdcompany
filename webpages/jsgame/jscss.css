@@ -173,7 +173,13 @@ background-color: #e8e8e8;}
 }
 
 
-
+#ustawienia {
+  background-color: #4ccf51;
+  display: none;
+  position: relative;
+  width: 100vw;
+  height: 85vh;
+}
 
 
 

@@ -1,4 +1,3 @@
-var money = 0;
 var ileczekac = 0;
 var idznow = "glowny";
 var idzdo = null;
@@ -6,6 +5,11 @@ var obstawienie = null;
 var obstawieniekomputer = null;
 var stawka = 0;
 var teststawka = 0;
+var player = {
+  id: 1,
+  nick: "Ludwike",
+  money: 3,
+}
 
 setInterval("ladowaniezmiennych();",1000);
 setInterval("czekanie();",1000);
@@ -32,8 +36,8 @@ function czekanie(){
 
 function ladowaniezmiennych(){
   //pieniadze
-  poID('pln').innerHTML = money + "$";
-  konsola("Stan konta: " + money + "$");
+  poID('pln').innerHTML = player.money + "$";
+  konsola("Stan konta: " + player.money + "$");
   //odbieranie kasy numer 1 + kolorki
   poID('odbierz1').innerHTML = "Odbierz";
   poID('odbierz1').style = "background-color: #00bf00";
@@ -49,7 +53,7 @@ function przejscie(a){
 function darmowepln(){
 if(ileczekac == 0){
   var darmowyhajs = 50;
-  money = money + darmowyhajs;
+  player.money = player.money + darmowyhajs;
   ileczekac = 30;
   poID('odbierz1').innerHTML = ileczekac + "s"; // ustawia insant kolor red
   poID('odbierz1').style = "background-color: red";
@@ -76,7 +80,7 @@ else { //jeżeli to KX ofc.
 
 function zmianastawki(a){
   teststawka = stawka + a;
-if(teststawka > money){
+if(teststawka > player.money){
   konsola("Nie masz wystarczająco pieniędzy, żeby obstawić: " + teststawka + "$");
   teststawka = stawka;
   zmianastawkiall()
@@ -89,7 +93,7 @@ else  {
   poID('pstawka').innerHTML = stawka + "$";}
 }
 function zmianastawkiall(){
-  stawka = money;
+  stawka = player.money;
   konsola("Obstawiles wszystkie swoje pieniadze czyli: " + stawka + "$");
   poID('pstawka').innerHTML = stawka + "$";
 }
@@ -102,7 +106,7 @@ function resetstawki(){
 
 function zmianastawkix2(){
   teststawka = stawka * 2;
-  if(teststawka > money){
+  if(teststawka > player.money){
   konsola("Nie masz wystarczająco pieniędzy, żeby obstawić: " + teststawka + "$");
   teststawka = stawka;
   return;
@@ -116,7 +120,7 @@ else  {
 
 function zmianastawkiy2(){
   teststawka = stawka / 2;
-  if(teststawka > money){
+  if(teststawka > player.money){
   konsola("Nie masz wystarczająco pieniędzy, żeby obstawić: " + teststawka + "$");
   teststawka = stawka;
   return;
@@ -128,8 +132,8 @@ else  {
   poID('pstawka').innerHTML = stawka + "$";}
 }
 function zmianastawkirandom(){
-stawka = (Math.floor(Math.random()*money+1));
-if(stawka > money){
+stawka = (Math.floor(Math.random()*player.money+1));
+if(stawka > player.money){
   stawka -= 1;
   konsola('Nie mozesz ustawic losowej kwoty!');
   return;
@@ -153,18 +157,18 @@ else{
 if(obstawieniekomputer == obstawienie){
   konsola('Wygrales!');
   poID('obstawienie').style = "color: green";
-  money += stawka;
+  player.money += stawka;
 }
 if(obstawieniekomputer !== obstawienie){
   konsola("Przegrales!");
   poID('obstawienie').style = "color: red";
-  money -= stawka;
+  player.money -= stawka;
 }
-poID('pln').innerHTML = money + "$";
-konsola("Aktualny stan konta: " + money + "$");
+poID('pln').innerHTML = player.money + "$";
+konsola("Aktualny stan konta: " + player.money + "$");
 // zeby kuraw na minus nie bylo
-if(stawka > money){
-  stawka = money;
+if(stawka > player.money){
+  stawka = player.money;
   poID('pstawka').innerHTML = stawka + "$";
   return;
 }
