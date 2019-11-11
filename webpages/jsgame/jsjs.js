@@ -7,7 +7,9 @@ var obstawieniekomputer = null;
 var stawka = 0;
 var teststawka = 0;
 
-setInterval("",4999);
+setInterval("console.clear()",4999);
+setInterval("ladowaniezmiennych();",1000);
+setInterval("czekaj();",1000);
 
 // SKROTY FUNKCJI I KOMEND
 function poID(id){
@@ -17,7 +19,7 @@ function konsola(text){
 
 // LADOWANIE I PODSTAWOWE FUNKCJE!!!
 function czekaj(){
-  // sprawdzanie kasy numer 1
+  // sprawdzanie odbioru pieniedzy numer 1
   if(ileczekac > 0){
     ileczekac--;
     poID('odbierz1').innerHTML = ileczekac + "s";
