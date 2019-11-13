@@ -40,6 +40,7 @@ function ladowaniezmiennych(){
   //odbieranie kasy numer 1 + kolorki
   poID('odbierz1').innerHTML = "Odbierz";
   poID('odbierz1').style = "background-color: #00bf00";
+  document.cookie = "pieniadze=" + player.money + "; expires=dataWygasniecia; path=/;";
 }
 
 function przejscie(a){
@@ -217,9 +218,9 @@ function loadCookies(){
 player.money = showCookie("pieniadze");
 if (player.money != "" || player.money != undefined){
 document.cookie = "pieniadze=3; expires=dataWygasniecia; path=/;";
-  konsola("stworzono jebane cooki hajs");}
+  konsola("DZIALA?!?!?!");}
 else{
 
-  konsola(" PLZ cOOKie");
+  konsola(" instant loading!");
 }
 }
