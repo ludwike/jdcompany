@@ -216,10 +216,10 @@ function showCookie(name) {
 function loadCookies(){
 player.money = showCookie("pieniadze");
 if (player.money != "" || player.money != undefined){
-  document.cookie = "pieniadze=0"
-konsola("zaladowano hajs");}
+document.cookie = "pieniadze=3; expires=dataWygasniecia; path=/;";
+  konsola("stworzono jebane cooki hajs");}
 else{
 
-  konsola("stworzono cuki");
+  konsola(" PLZ cOOKie");
 }
 }
