@@ -197,6 +197,7 @@ function przejscie(a){
 function deleteCookie(name) {
     const cookieName = encodeURIComponent(name);
     document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    Konsola('Usunięto cookie o nazwie: ' + name);
 }
 
 function showCookie(name) {
@@ -215,9 +216,10 @@ function showCookie(name) {
 function loadCookies(){
 player.money = showCookie("pieniadze");
 if (player.money != "" || player.money != undefined){
+  document.cookie = "pieniadze=0"
 konsola("zaladowano hajs");}
 else{
-document.cookie = "pieniadze=0"
+
   konsola("stworzono cuki");
 }
 }
