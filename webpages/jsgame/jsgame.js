@@ -54,7 +54,7 @@ function przejscie(a){
   function darmowepln(){
     if(ileczekac == 0){
       var darmowyhajs = 50;
-      player.money = player.money + darmowyhajs;
+      player.money += darmowyhajs;
       ileczekac = 30;
       poID('odbierz1').innerHTML = ileczekac + "s"; // ustawia insant kolor red
       poID('odbierz1').style = "background-color: red";
