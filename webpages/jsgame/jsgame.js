@@ -197,7 +197,7 @@ function przejscie(a){
 function deleteCookie(name) {
     const cookieName = encodeURIComponent(name);
     document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-    Konsola('Usunięto cookie o nazwie: ' + name);
+    konsola('Usunięto cookie o nazwie: ' + name);
 }
 
 function showCookie(name) {
