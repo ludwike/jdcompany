@@ -8,57 +8,10 @@ var teststawka = 0;
 var player = {
   id: 1,
   nick: "Ludwike",
-  money: 0,
-}
-setCookie('pieniadze',money);
+  money: 0,}
 setInterval("ladowaniezmiennych();",1000);
 setInterval("czekanie();",1000);
 
-function setCookie(name, val, days, path, domain, secure) {
-    if (navigator.cookieEnabled) {
-        const cookieName = encodeURIComponent(name);
-        const cookieVal = encodeURIComponent(val);
-        let cookieText = cookieName + "=" + cookieVal;
-
-        if (typeof days === "number") {
-            const data = new Date();
-            data.setTime(data.getTime() + (days * 24*60*60*1000));
-            cookieText += "; expires=" + data.toGMTString();
-        }
-
-        if (path) {
-            cookieText += "; path=" + path;
-        }
-        if (domain) {
-            cookieText += "; domain=" + domain;
-        }
-        if (secure) {
-            cookieText += "; secure";
-        }
-
-        document.cookie = cookieText;
-    }
-}
-
-function showCookie(name) {
-    if (document.cookie !== "") {
-        const cookies = document.cookie.split(/; */);
-
-        for (let i=0; i<cookies.length; i++) {
-            const cookieName = cookies[i].split("=")[0];
-            const cookieVal = cookies[i].split("=")[1];
-            if (cookieName === decodeURIComponent(name)) {
-                return decodeURIComponent(cookieVal);
-            }
-        }
-    }
-}
-function deleteCookie(name) {
-    const data = new Date();
-    data.setTime(date.getMonth()-1);
-    const name = encodeURIComponent(name);
-    document.cookie = name + "=; expires=" + data.toGMTString();
-}
 
 // SKROTY FUNKCJI I KOMEND
 function poID(id){
@@ -87,7 +40,6 @@ function ladowaniezmiennych(){
   //odbieranie kasy numer 1 + kolorki
   poID('odbierz1').innerHTML = "Odbierz";
   poID('odbierz1').style = "background-color: #00bf00";
-  const cookies = document.cookie.split(/; */);
 }
 
 function przejscie(a){
@@ -215,8 +167,40 @@ function przejscie(a){
     }
   }
 
+  function setCookie(name, val, days, path, domain, secure) {
+      if (navigator.cookiesEnabled) {
+          const cookieName = encodeURIComponent(name);
+          const cookieVal = encodeURIComponent(val);
+          let cookieText = cookieName + "=" + cookieVal;
+
+          if (typeof days === "number") {
+              const data = new Date();
+              data.setTime(data.getTime() + (days * 24*60*60*1000));
+              cookieText += "; expires=" + data.toGMTString();
+          }
+
+          if (path) {
+              cookieText += "; path=" + path;
+          }
+          if (domain) {
+              cookieText += "; domain=" + domain;
+          }
+          if (secure) {
+              cookieText += "; secure";
+          }
+
+          document.cookie = cookieText;
+      }
+  }
+
+
+function deleteCookie(name) {
+    const cookieName = encodeURIComponent(name);
+    document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+
 function showCookie(name) {
-    if (document.cookie !== "") {
+    if (document.cookie != "") {
         const cookies = document.cookie.split(/; */);
 
         for (let i=0; i<cookies.length; i++) {
@@ -227,4 +211,13 @@ function showCookie(name) {
             }
         }
     }
+}
+function loadCookies(){
+player.money = showCookie("pieniadze");
+if (player.money != ""){
+konsola("zaladowano hajs");}
+else{
+  setCookie("pieniadze",null);
+  konsola("stworzono cuki");
+}
 }
