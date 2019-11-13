@@ -40,7 +40,7 @@ function ladowaniezmiennych(){
   //odbieranie kasy numer 1 + kolorki
   poID('odbierz1').innerHTML = "Odbierz";
   poID('odbierz1').style = "background-color: #00bf00";
-  document.cookie = "pieniadze=" + player.money + "; expires=dataWygasniecia; path=/;";
+  
   konsola("Zapisano cookie's.");
 }
 
@@ -218,7 +218,7 @@ function showCookie(name) {
 function loadCookies(){
 player.money = showCookie("pieniadze");
 if (player.money != "" || player.money != undefined){
-document.cookie = "pieniadze='0'; expires=dataWygasniecia; path=/;";
+  document.cookie = "pieniadze='0'; expires=dataWygasniecia; path=/;";
   konsola("DZIALA?!?!?!");}
 else{
 
