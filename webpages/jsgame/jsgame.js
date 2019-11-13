@@ -5,19 +5,19 @@ var obstawienie = null;
 var obstawieniekomputer = null;
 var stawka = 0;
 var teststawka = 0;
-document.cookie = "username=John Smith; expires=Thu, 18 Dec 2020 12:00:00 UTC; path=/";
-var xd = document.cookie;
 var player = {
   id: 1,
   nick: "Ludwike",
   money: 0,
 }
-
+setCookie('pieniadze',money);
+const cookies = document.cookie.split(/; */);
+konsola(cookies[2] + cookies[1]);
 setInterval("ladowaniezmiennych();",1000);
 setInterval("czekanie();",1000);
 
 function setCookie(name, val, days, path, domain, secure) {
-    if (navigator.cookieEnabled) { //czy ciasteczka są włączone
+    if (navigator.cookieEnabled) {
         const cookieName = encodeURIComponent(name);
         const cookieVal = encodeURIComponent(val);
         let cookieText = cookieName + "=" + cookieVal;
@@ -198,3 +198,17 @@ function przejscie(a){
       return;
     }
   }
+
+function showCookie(name) {
+    if (document.cookie !== "") {
+        const cookies = document.cookie.split(/; */);
+
+        for (let i=0; i<cookies.length; i++) {
+            const cookieName = cookies[i].split("=")[0];
+            const cookieVal = cookies[i].split("=")[1];
+            if (cookieName === decodeURIComponent(name)) {
+                return decodeURIComponent(cookieVal);
+            }
+        }
+    }
+}
