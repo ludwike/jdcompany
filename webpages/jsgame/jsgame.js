@@ -217,7 +217,7 @@ function showCookie(name) {
 function loadCookies(){
 player.money = showCookie("pieniadze");
 if (player.money != "" || player.money != undefined){
-document.cookie = "pieniadze=3; expires=dataWygasniecia; path=/;";
+document.cookie = "pieniadze='0'; expires=dataWygasniecia; path=/;";
   konsola("DZIALA?!?!?!");}
 else{
 
