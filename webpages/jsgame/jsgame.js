@@ -11,8 +11,6 @@ var player = {
   money: 0,
 }
 setCookie('pieniadze',money);
-const cookies = document.cookie.split(/; */);
-konsola(cookies[2] + cookies[1]);
 setInterval("ladowaniezmiennych();",1000);
 setInterval("czekanie();",1000);
 
@@ -42,8 +40,25 @@ function setCookie(name, val, days, path, domain, secure) {
     }
 }
 
+function showCookie(name) {
+    if (document.cookie !== "") {
+        const cookies = document.cookie.split(/; */);
 
-
+        for (let i=0; i<cookies.length; i++) {
+            const cookieName = cookies[i].split("=")[0];
+            const cookieVal = cookies[i].split("=")[1];
+            if (cookieName === decodeURIComponent(name)) {
+                return decodeURIComponent(cookieVal);
+            }
+        }
+    }
+}
+function deleteCookie(name) {
+    const data = new Date();
+    data.setTime(date.getMonth()-1);
+    const name = encodeURIComponent(name);
+    document.cookie = name + "=; expires=" + data.toGMTString();
+}
 
 // SKROTY FUNKCJI I KOMEND
 function poID(id){
@@ -72,6 +87,7 @@ function ladowaniezmiennych(){
   //odbieranie kasy numer 1 + kolorki
   poID('odbierz1').innerHTML = "Odbierz";
   poID('odbierz1').style = "background-color: #00bf00";
+  const cookies = document.cookie.split(/; */);
 }
 
 function przejscie(a){
