@@ -40,7 +40,8 @@ function ladowaniezmiennych(){
   //odbieranie kasy numer 1 + kolorki
   poID('odbierz1').innerHTML = "Odbierz";
   poID('odbierz1').style = "background-color: #00bf00";
-  document.cookie = "pieniadze=" + player.money + "; expires=dataWygasniecia; path=/;";
+  document.cookie = "pieniadze=" + player.money + "; expires=dataWygasniecia; path=/;";\
+  konsola("Zapisano cookie's.");
 }
 
 function przejscie(a){
