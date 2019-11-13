@@ -222,6 +222,6 @@ document.cookie = "pieniadze='0'; expires=dataWygasniecia; path=/;";
   konsola("DZIALA?!?!?!");}
 else{
 
-  konsola(" instant loading!");
+  konsola("instant loading!");
 }
 }
