@@ -214,10 +214,10 @@ function showCookie(name) {
 }
 function loadCookies(){
 player.money = showCookie("pieniadze");
-if (player.money != ""){
+if (player.money != "" || player.money != undefined){
 konsola("zaladowano hajs");}
 else{
-  setCookie("pieniadze",null);
+document.cookie = "pieniadze=0"
   konsola("stworzono cuki");
 }
 }
