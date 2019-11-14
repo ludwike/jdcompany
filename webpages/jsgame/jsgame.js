@@ -26,7 +26,7 @@ if(ileczekac > 0){
   ileczekac--;
   poID('odbierz1').innerHTML = ileczekac + "s";
   poID('odbierz1').style = "background-color: red";
-  konsola("Pozostało: " + ileczekac + " sekund do darmowej kasy.");
+  //konsola("Pozostało: " + ileczekac + " sekund do darmowej kasy.");
 }
   else {
     poID('odbierz1').style = "background-color: #00bf00";
@@ -36,12 +36,11 @@ if(ileczekac > 0){
 function ladowaniezmiennych(){
   //pieniadze
   poID('pln').innerHTML = player.money + "$";
-  konsola("Stan konta: " + player.money + "$");
+  //konsola("Stan konta: " + player.money + "$");
   //odbieranie kasy numer 1 + kolorki
   poID('odbierz1').innerHTML = "Odbierz";
   poID('odbierz1').style = "background-color: #00bf00";
-  
-  konsola("Zapisano cookie's.");
+
 }
 
 function przejscie(a){
@@ -161,7 +160,7 @@ function przejscie(a){
     }
     poID('pln').innerHTML = player.money + "$";
     konsola("Aktualny stan konta: " + player.money + "$");
-// zeby kuraw na minus nie bylo
+  // zeby  na minus nie bylo
     if(stawka > player.money){
       stawka = player.money;
       poID('pstawka').innerHTML = stawka + "$";
@@ -169,59 +168,19 @@ function przejscie(a){
     }
   }
 
-  function setCookie(name, val, days, path, domain, secure) {
-      if (navigator.cookiesEnabled) {
-          const cookieName = encodeURIComponent(name);
-          const cookieVal = encodeURIComponent(val);
-          let cookieText = cookieName + "=" + cookieVal;
 
-          if (typeof days === "number") {
-              const data = new Date();
-              data.setTime(data.getTime() + (days * 24*60*60*1000));
-              cookieText += "; expires=" + data.toGMTString();
-          }
+function mojeCookies(){
+  alert();
 
-          if (path) {
-              cookieText += "; path=" + path;
-          }
-          if (domain) {
-              cookieText += "; domain=" + domain;
-          }
-          if (secure) {
-              cookieText += "; secure";
-          }
+player.money = parseInt(Cookies.get('pieniadze'));
 
-          document.cookie = cookieText;
-      }
-  }
+if(player.money == NaN){
+  Cookies.set('pieniadze',player.money, { expires: 366 });
+  player.money = parseInt(Cookies.get('pieniadze'));
 
+  if(player.money == NaN) {player.money = 0;}
 
-function deleteCookie(name) {
-    const cookieName = encodeURIComponent(name);
-    document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-    konsola('Usunięto cookie o nazwie: ' + name);
+  konsola('Stworzono cookie pieniadze.');
 }
-
-function showCookie(name) {
-    if (document.cookie != "") {
-        const cookies = document.cookie.split(/; */);
-
-        for (let i=0; i<cookies.length; i++) {
-            const cookieName = cookies[i].split("=")[0];
-            const cookieVal = cookies[i].split("=")[1];
-            if (cookieName === decodeURIComponent(name)) {
-                return decodeURIComponent(cookieVal);
-            }
-        }
-    }
-}
-function loadCookies(){
-player.money = showCookie("pieniadze");
-if (player.money != "" || player.money != undefined){
-  document.cookie = "pieniadze='0'; expires=dataWygasniecia; path=/;";
-  konsola("DZIALA?!?!?!");}
-else{
-
-  konsola("instant loading!");
-}
+  konsola('Zaladowano cookie z laod');
 }
