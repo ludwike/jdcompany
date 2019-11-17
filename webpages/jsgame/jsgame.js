@@ -60,7 +60,7 @@ function przejscie(a){
 // KOLEJNE FUNKCJE
   function darmowepln(){
     if(ileczekac == 0){
-      var darmowyhajs = 50;
+      var darmowyhajs = 15;
       player.money += darmowyhajs;
       ileczekac = 30;
       poID('odbierz1').innerHTML = ileczekac + "s"; // ustawia insant kolor red
