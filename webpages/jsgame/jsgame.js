@@ -1,3 +1,4 @@
+//moje cookies pieniadze ma sie ladowac tutaj!
 var ileczekac = 0;
 var idznow = "glowny";
 var idzdo = null;
@@ -9,8 +10,9 @@ var player = {
   id: 1,
   nick: "Ludwike",
   money: 0,}
-setInterval("ladowaniezmiennych();",1000);
+setInterval("aktualizacjazmiennych();",1000);
 setInterval("czekanie();",1000);
+setInterval("mojeCookieszapis();",1000);
 
 
 // SKROTY FUNKCJI I KOMEND
@@ -20,13 +22,18 @@ function konsola(text){
     return console.log(text)}
 
 // LADOWANIE I PODSTAWOWE FUNKCJE!!!
+function onLoadAll(){
+aktualizacjazmiennych();
+mojeCookiesladowanie('pieniadze');
+ladowaniezmiennych();
+}
 function czekanie(){
   // sprawdzanie odbioru pieniedzy numer 1
 if(ileczekac > 0){
   ileczekac--;
   poID('odbierz1').innerHTML = ileczekac + "s";
   poID('odbierz1').style = "background-color: red";
-  //konsola("Pozostało: " + ileczekac + " sekund do darmowej kasy.");
+  konsola("Pozostało: " + ileczekac + " sekund do darmowej kasy.");
 }
   else {
     poID('odbierz1').style = "background-color: #00bf00";
@@ -34,13 +41,14 @@ if(ileczekac > 0){
     konsola("Możesz odebrać pieniądze.");}}
 
 function ladowaniezmiennych(){
-  //pieniadze
-  poID('pln').innerHTML = player.money + "$";
-  //konsola("Stan konta: " + player.money + "$");
   //odbieranie kasy numer 1 + kolorki
   poID('odbierz1').innerHTML = "Odbierz";
   poID('odbierz1').style = "background-color: #00bf00";
-
+}
+function aktualizacjazmiennych(){
+  //pieniadze
+  poID('pln').innerHTML = player.money + "$";
+  konsola("Stan konta: " + player.money + "$");
 }
 
 function przejscie(a){
@@ -94,6 +102,7 @@ function przejscie(a){
     stawka = player.money;
     konsola("Obstawiles wszystkie swoje pieniadze czyli: " + stawka + "$");
     poID('pstawka').innerHTML = stawka + "$";
+    return;
   }
   function resetstawki(){
     stawka = 0;
@@ -165,22 +174,42 @@ function przejscie(a){
       stawka = player.money;
       poID('pstawka').innerHTML = stawka + "$";
       return;
+        player.money = parseInt(Cookies.get('pieniadze'));
     }
   }
 
 
-function mojeCookies(){
-  alert();
-
-player.money = parseInt(Cookies.get('pieniadze'));
-
-if(player.money == NaN){
-  Cookies.set('pieniadze',player.money, { expires: 366 });
-  player.money = parseInt(Cookies.get('pieniadze'));
-
-  if(player.money == NaN) {player.money = 0;}
-
-  konsola('Stworzono cookie pieniadze.');
+function mojeCookiesladowanie(a){
+  var wartosccookie=getCookie(a);
+  if (wartosccookie != "") { //jeżeli cookie nie jest puste!
+      konsola('Cookie o nazwie "' + a +'" istnieje.');
+      player.money = parseInt(wartosccookie);
+      konsola('Pieniądze zostały zaktualizowane.');
+      return;
+  } else {
+      konsola('Nie istnieje cookie o nazwie: "' + a + '".');
+      Cookies.set(a,player.money, { expires: 365 });
+      return;
+    }
 }
-  konsola('Zaladowano cookie z laod');
+function mojeCookieszapis(){
+  Cookies.set('pieniadze',player.money, { expires: 365 })
+  konsola('Cookies zostały automatycznie zapisane!');
 }
+
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+} //sprawdzanie czy jest cookie
