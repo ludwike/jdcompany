@@ -9,9 +9,7 @@ table, tr, th {
   border: 1px solid black;
   border-collapse: collapse;
 }
-#gornyblok {
-    /* border-top: 2px solid black; */
-}
+
 #gornyblok, #dolnyblok {
   position: relative;
   width: 100vw;

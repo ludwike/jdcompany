@@ -6,6 +6,7 @@ var obstawienie = null;
 var obstawieniekomputer = null;
 var stawka = 0;
 var teststawka = 0;
+var wartosccookie = null;
 var player = {
   id: 1,
   nick: "Ludwike",
@@ -14,19 +15,48 @@ setInterval("aktualizacjazmiennych();",1000);
 setInterval("czekanie();",1000);
 setInterval("mojeCookieszapis();",1000);
 
-
+function mojeCookiespieniadze(nazwacookie,liczbatekst){
+  wartosccookie=getCookie(nazwacookie);
+  if (wartosccookie != "") { //jeżeli cookie nie jest puste!
+      konsola('Cookie o nazwie "' + nazwacookie +'" istnieje.');
+      player.money = parseInt(wartosccookie);
+      konsola('Pieniądze zostały zaktualizowane.');
+      return;
+  } else {
+      konsola('Nie istnieje cookie o nazwie: "' + nazwacookie + '".');
+      player.money = liczbatekst;
+      Cookies.set(nazwacookie,liczbatekst, { expires: 365 });
+      return;
+    }
+}
+function mojeCookiesdarmowepln(nazwacookie,liczbatekst){
+  wartosccookie=getCookie(nazwacookie);
+  if (wartosccookie != "") { //jeżeli cookie nie jest puste!
+      konsola('Cookie o nazwie "' + nazwacookie +'" istnieje.');
+      ileczekac = parseInt(wartosccookie);
+      konsola('Pieniądze zostały zaktualizowane.');
+      return;
+  } else {
+      konsola('Nie istnieje cookie o nazwie: "' + nazwacookie + '".');
+      ileczekac = liczbatekst;
+      Cookies.set(nazwacookie,liczbatekst, { expires: 365 });
+      return;
+    }
+}
 // SKROTY FUNKCJI I KOMEND
 function poID(id){
     return document.getElementById(id);}
 function konsola(text){
-    return console.log(text)}
+  return console.log(text)}
 
-// LADOWANIE I PODSTAWOWE FUNKCJE!!!
+// LADOWANIE I PODSTAWOWE FUN KCJE!!!
 function onLoadAll(){
-aktualizacjazmiennych();
-mojeCookiesladowanie('pieniadze');
-ladowaniezmiennych();
+  mojeCookiespieniadze('pieniadze',5);
+  mojeCookiesdarmowepln('darmoweplnczekanie',5);
+
+  ladowaniezmiennych();
 }
+
 function czekanie(){
   // sprawdzanie odbioru pieniedzy numer 1
 if(ileczekac > 0){
@@ -68,6 +98,9 @@ function przejscie(a){
       return;}
       konsola("Musisz odczekać 30 sekund przed następnym poborem pieniędzy.");
     }
+
+
+
 
 // COINFLIP FUNKCJE
   function obstawiam(a){
@@ -179,21 +212,10 @@ function przejscie(a){
   }
 
 
-function mojeCookiesladowanie(a){
-  var wartosccookie=getCookie(a);
-  if (wartosccookie != "") { //jeżeli cookie nie jest puste!
-      konsola('Cookie o nazwie "' + a +'" istnieje.');
-      player.money = parseInt(wartosccookie);
-      konsola('Pieniądze zostały zaktualizowane.');
-      return;
-  } else {
-      konsola('Nie istnieje cookie o nazwie: "' + a + '".');
-      Cookies.set(a,player.money, { expires: 365 });
-      return;
-    }
-}
+
 function mojeCookieszapis(){
-  Cookies.set('pieniadze',player.money, { expires: 365 })
+  Cookies.set('pieniadze',player.money, { expires: 365 });
+  Cookies.set('darmoweplnczekanie',ileczekac, { expires: 365 });
   konsola('Cookies zostały automatycznie zapisane!');
 }
 
