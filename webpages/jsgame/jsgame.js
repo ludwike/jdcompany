@@ -52,7 +52,7 @@ function konsola(text){
 // LADOWANIE I PODSTAWOWE FUN KCJE!!!
 function onLoadAll(){
   mojeCookiespieniadze('pieniadze',5);
-  mojeCookiesdarmowepln('darmoweplnczekanie',5);
+  mojeCookiesdarmowepln('darmoweplnczekanie',0);
 
   ladowaniezmiennych();
 }
