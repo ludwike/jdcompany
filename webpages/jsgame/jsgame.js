@@ -9,6 +9,7 @@ var teststawka = 0;
 var wartosccookie = null;
 var cena = 10;
 var ilosc = 0;
+var iloscp = 0;
 var czy = null;
 var i = null;
 var cenaczesczmienna = null;
@@ -60,12 +61,12 @@ function mojeCookiesilosc(nazwacookie,liczbatekst){
   wartosccookie=getCookie(nazwacookie);
   if (wartosccookie != "") { //jeżeli cookie nie jest puste!
       konsola('Cookie o nazwie "' + nazwacookie +'" istnieje.');
-      ilosc = parseInt(wartosccookie);
+      iloscp = parseInt(wartosccookie);
       konsola('Pieniądze zostały zaktualizowane.');
       return;
   } else {
       konsola('Nie istnieje cookie o nazwie: "' + nazwacookie + '".');
-      ilosc = liczbatekst;
+      iloscp = liczbatekst;
       Cookies.set(nazwacookie,liczbatekst, { expires: 365 });
       return;
     }
@@ -82,7 +83,7 @@ function konsola(text){
 function onLoadAll(){
   mojeCookiespieniadze('pieniadze',5);
   mojeCookiesdarmowepln('darmoweplnczekanie',0);
-  mojeCookiesilosc('ilosc',0);
+  mojeCookiesilosc('iloscp',0);
 
   ladowaniezmiennych();
 }
@@ -121,7 +122,7 @@ function przejscie(a){
 // KOLEJNE FUNKCJE
   function darmowepln(){
     if(ileczekac == 0){
-      var darmowyhajs = 15;
+      var darmowyhajs = 150000;
       player.money += darmowyhajs;
       ileczekac = 30;
       poID('odbierz1').innerHTML = ileczekac + "s"; // ustawia insant kolor red
@@ -134,7 +135,7 @@ function przejscie(a){
 function mojeCookieszapis(){
   Cookies.set('pieniadze',player.money, { expires: 365 });
   Cookies.set('darmoweplnczekanie',ileczekac, { expires: 365 });
-  Cookies.set('ilosc',ilosc, { expires: 365 });
+  Cookies.set('iloscp',iloscp, { expires: 365 });
 //  konsola('Cookies zostały automatycznie zapisane!');
 }
 
@@ -158,7 +159,7 @@ function getCookie(cname) {
 function rynek(){
   cenaczesczmienna = 2;
   poID('itemcena').innerHTML = cena + "$";
-  poID('iloscprzedm').innerHTML = ilosc;
+  poID('iloscprzedm').innerHTML = iloscp;
 }
 function kup(){
   if(cena == 0){
@@ -169,21 +170,21 @@ function kup(){
     return;}
   else{
     player.money -= cena;
-    ilosc += 1;
+    iloscp += 1;
     poID('pln').innerHTML = player.money + "$";
-    poID('iloscprzedm').innerHTML = ilosc;
+    poID('iloscprzedm').innerHTML = iloscp;
     rynek();
   }
 }
 function sprzedaj(){
-  if(ilosc <= 0){
+  if(iloscp <= 0){
     konsola('Nie masz tego przedmiotu!');
     return;}
   else{
-    ilosc -= 1;
+    iloscp -= 1;
     player.money += cena;
     poID('pln').innerHTML = player.money + "$";
-    poID('iloscprzedm').innerHTML = ilosc;
+    poID('iloscprzedm').innerHTML = iloscp;
     rynek();
   }
 }
@@ -201,9 +202,7 @@ if(czy == 1 && cena == 0){
     cena -= cenaczesczmienna;}
   if(czy == 2){
     cena += cenaczesczmienna;}
-
   poID('itemcena').innerHTML = cena + "$";
-
 }
 
 
