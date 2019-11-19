@@ -4,6 +4,7 @@
     <script src="js.cookie.min.js"></script>
     <link rel="stylesheet" href="jscss.css">
     <script src="jsgame.js"></script>
+    <script src="jsrynek.js"></script>
     <script src="jscoinflip.js"></script>
     <meta name="viewport" content="width-device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta charset="utf-8">
@@ -17,6 +18,14 @@ Changelog
 17-11-2019 - v.0.22 - zapisywanie pieniedzy w cookies +dwie biblioteki about cookies
 18-11-2019 - v.0.23 - zapisywanie timer'ów w cookies
 19-11-2019 - v.0.26 - informacja o złej rozdzielczości gdy width<800px and landscape, alpha rynek
+00-00-2019 - v.0.00 -
+00-00-2019 - v.0.00 -
+00-00-2019 - v.0.00 -
+00-00-2019 - v.0.00 -
+00-00-2019 - v.0.00 -
+00-00-2019 - v.0.00 -
+00-00-2019 - v.0.00 -
+00-00-2019 - v.0.00 -
 00-00-2019 - v.0.00 -
 -->
   </head>
@@ -79,7 +88,13 @@ Changelog
     </div>
 
   <div id="ustawienia">
-<span>ustawienia</span><br>
+    <table>
+      <tr>
+        <th class="a">Czy wyrażasz zgodę na używanie cookie's? <i>(zapis)</i></th>
+        <th class="bzgoda" onClick="zgodacookie(1)">Tak</th>
+        <th class="czgoda" onClick="zgodacookie(2)">Nie</th>
+      </tr>
+    </table>
     </div>
 
 <!-- POD PANELE POD PANELE POD PANELE POD PANELE -->

@@ -13,6 +13,7 @@ var iloscp = 0;
 var czy = null;
 var i = null;
 var cenaczesczmienna = null;
+var zgodanacookie = 2;
 var player = {
   id: 1,
   nick: "Ludwike",
@@ -24,6 +25,7 @@ const saper = [
   [16,17,18,19,20],
   [21,22,23,24,25],
 ];
+
 setInterval("aktualizacjazmiennych();",1000);
 setInterval("czekanie();",1000);
 setInterval("mojeCookieszapis();",1000);
@@ -71,21 +73,39 @@ function mojeCookiesilosc(nazwacookie,liczbatekst){
       return;
     }
 }
+function mojeCookieszgoda(nazwacookie,liczbatekst){
+  wartosccookie=getCookie(nazwacookie);
+  if (wartosccookie != "") { //jeżeli cookie nie jest puste!
+      konsola('Cookie o nazwie "' + nazwacookie +'" istnieje.');
+      zgodanacookie = parseInt(wartosccookie);
+      konsola('Pieniądze zostały zaktualizowane.');
+      return;
+  } else {
+      konsola('Nie istnieje cookie o nazwie: "' + nazwacookie + '".');
+      zgodanacookie = liczbatekst;
+      Cookies.set(nazwacookie,liczbatekst, { expires: 365 });
+      return;
+    }
+}
 
 
 // SKROTY FUNKCJI I KOMEND
 function poID(id){
     return document.getElementById(id);}
 function konsola(text){
-  return console.log(text)}
+  return console.log(text);}
+function poKlasie(klasa,numer){
+  return document.getElementsByClassName(klasa)[numer];}
 
 // LADOWANIE I PODSTAWOWE FUN KCJE!!!
 function onLoadAll(){
+  mojeCookieszgoda('zgodanacookie',0);
+  ladowaniezmiennych();
+  if(zgodanacookie != 1){return;}
   mojeCookiespieniadze('pieniadze',5);
   mojeCookiesdarmowepln('darmoweplnczekanie',0);
   mojeCookiesilosc('iloscp',0);
 
-  ladowaniezmiennych();
 }
 
 function czekanie(){
@@ -103,9 +123,13 @@ if(ileczekac > 0){
   }}
 
 function ladowaniezmiennych(){
+  if(zgodanacookie != 1){
+    konsola('jd');
+  }
   //odbieranie kasy numer 1 + kolorki
   poID('odbierz1').innerHTML = "Odbierz";
   poID('odbierz1').style = "background-color: #00bf00";
+  zgodacookie(zgodanacookie);
 }
 function aktualizacjazmiennych(){
   //pieniadze
@@ -133,9 +157,11 @@ function przejscie(a){
 
 
 function mojeCookieszapis(){
+  if(zgodanacookie != 1){return;}
   Cookies.set('pieniadze',player.money, { expires: 365 });
   Cookies.set('darmoweplnczekanie',ileczekac, { expires: 365 });
   Cookies.set('iloscp',iloscp, { expires: 365 });
+  Cookies.set('zgodanacookie',zgodanacookie, { expires: 365 });
 //  konsola('Cookies zostały automatycznie zapisane!');
 }
 
@@ -156,54 +182,20 @@ function getCookie(cname) {
   return "";
 } //sprawdzanie czy jest cookie
 
-function rynek(){
-  cenaczesczmienna = 2;
-  poID('itemcena').innerHTML = cena + "$";
-  poID('iloscprzedm').innerHTML = iloscp;
-}
-function kup(){
-  if(cena == 0){
-    return;
+function zgodacookie(a){
+  if(a == 1){
+    poKlasie('bzgoda',0).style.background = "#ff4824";
+    poKlasie('czgoda',0).style.background = "none";
+   zgodanacookie = 1;
   }
-  if(player.money < cena){
-    konsola('Nie masz wystarczająco pieniędzy!');
-    return;}
   else{
-    player.money -= cena;
-    iloscp += 1;
-    poID('pln').innerHTML = player.money + "$";
-    poID('iloscprzedm').innerHTML = iloscp;
-    rynek();
+    zgodanacookie = 0;
+    Cookies.set('zgodanacookie',zgodanacookie, { expires: 365 });
+    poKlasie('czgoda',0).style.background = "#ff4824";
+    poKlasie('bzgoda',0).style.background = "none";
   }
 }
-function sprzedaj(){
-  if(iloscp <= 0){
-    konsola('Nie masz tego przedmiotu!');
-    return;}
-  else{
-    iloscp -= 1;
-    player.money += cena;
-    poID('pln').innerHTML = player.money + "$";
-    poID('iloscprzedm').innerHTML = iloscp;
-    rynek();
-  }
-}
-function zmianaceny(){
-  czy = Math.floor(Math.random()*2+1);
-if(czy == 1 && cena == 0){
-  i++;
-  if(i == 3){
-    cena = 10;
-    i = 0;
-  }
-  return;
-}
-  if(czy == 1){
-    cena -= cenaczesczmienna;}
-  if(czy == 2){
-    cena += cenaczesczmienna;}
-  poID('itemcena').innerHTML = cena + "$";
-}
+
 
 
 

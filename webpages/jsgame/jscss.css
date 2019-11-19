@@ -206,6 +206,24 @@ border-radius: 50%;
 
 }
 
+
+#ustawienia table{
+  width: 100vw;
+}
+#ustawienia table th.a{
+  background-color: lightgrey;
+  width: 70vw;
+  height: 40px;
+}
+#ustawienia table th.b{
+  background-color: lightgrey;
+  width: 15vw;
+}
+#ustawienia table th.c{
+  width: 15vw;
+  background-color: red;
+}
+
 span#zlywidok{
     display: none;
   }
