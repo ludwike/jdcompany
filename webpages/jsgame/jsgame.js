@@ -16,10 +16,17 @@ var player = {
   id: 1,
   nick: "Ludwike",
   money: 0,}
+const saper = [
+  [1,2,3,4,5],
+  [6,7,8,9,10],
+  [11,12,13,14,15],
+  [16,17,18,19,20],
+  [21,22,23,24,25],
+];
 setInterval("aktualizacjazmiennych();",1000);
 setInterval("czekanie();",1000);
 setInterval("mojeCookieszapis();",1000);
-setInterval("zmianaceny();",100);
+setInterval("zmianaceny();",250);
 
 function mojeCookiespieniadze(nazwacookie,liczbatekst){
   wartosccookie=getCookie(nazwacookie);
@@ -86,12 +93,13 @@ if(ileczekac > 0){
   ileczekac--;
   poID('odbierz1').innerHTML = ileczekac + "s";
   poID('odbierz1').style = "background-color: red";
-  konsola("Pozostało: " + ileczekac + " sekund do darmowej kasy.");
+//  konsola("Pozostało: " + ileczekac + " sekund do darmowej kasy.");
 }
   else {
     poID('odbierz1').style = "background-color: #00bf00";
     poID('odbierz1').innerHTML = "Odbierz";
-    konsola("Możesz odebrać pieniądze.");}}
+  //  konsola("Możesz odebrać pieniądze.");
+  }}
 
 function ladowaniezmiennych(){
   //odbieranie kasy numer 1 + kolorki
@@ -127,7 +135,7 @@ function mojeCookieszapis(){
   Cookies.set('pieniadze',player.money, { expires: 365 });
   Cookies.set('darmoweplnczekanie',ileczekac, { expires: 365 });
   Cookies.set('ilosc',ilosc, { expires: 365 });
-  konsola('Cookies zostały automatycznie zapisane!');
+//  konsola('Cookies zostały automatycznie zapisane!');
 }
 
 
@@ -153,6 +161,9 @@ function rynek(){
   poID('iloscprzedm').innerHTML = ilosc;
 }
 function kup(){
+  if(cena == 0){
+    return;
+  }
   if(player.money < cena){
     konsola('Nie masz wystarczająco pieniędzy!');
     return;}
@@ -194,7 +205,6 @@ if(czy == 1 && cena == 0){
   poID('itemcena').innerHTML = cena + "$";
 
 }
-
 
 
 
