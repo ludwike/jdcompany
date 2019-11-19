@@ -177,3 +177,11 @@ span#zlywidok{
   text-align: center;
   border: 5px solid red;
 }
+@media (orientation: landscape){
+#glowny{
+  font-size: 30px;
+}
+span#zlywidok{
+  height: 65vh;
+}
+}
