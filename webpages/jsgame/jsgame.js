@@ -7,6 +7,11 @@ var obstawieniekomputer = null;
 var stawka = 0;
 var teststawka = 0;
 var wartosccookie = null;
+var cena = 10;
+var ilosc = 0;
+var czy = null;
+var i = null;
+var cenaczesczmienna = null;
 var player = {
   id: 1,
   nick: "Ludwike",
@@ -14,6 +19,7 @@ var player = {
 setInterval("aktualizacjazmiennych();",1000);
 setInterval("czekanie();",1000);
 setInterval("mojeCookieszapis();",1000);
+setInterval("zmianaceny();",100);
 
 function mojeCookiespieniadze(nazwacookie,liczbatekst){
   wartosccookie=getCookie(nazwacookie);
@@ -43,6 +49,22 @@ function mojeCookiesdarmowepln(nazwacookie,liczbatekst){
       return;
     }
 }
+function mojeCookiesilosc(nazwacookie,liczbatekst){
+  wartosccookie=getCookie(nazwacookie);
+  if (wartosccookie != "") { //jeżeli cookie nie jest puste!
+      konsola('Cookie o nazwie "' + nazwacookie +'" istnieje.');
+      ilosc = parseInt(wartosccookie);
+      konsola('Pieniądze zostały zaktualizowane.');
+      return;
+  } else {
+      konsola('Nie istnieje cookie o nazwie: "' + nazwacookie + '".');
+      ilosc = liczbatekst;
+      Cookies.set(nazwacookie,liczbatekst, { expires: 365 });
+      return;
+    }
+}
+
+
 // SKROTY FUNKCJI I KOMEND
 function poID(id){
     return document.getElementById(id);}
@@ -53,6 +75,7 @@ function konsola(text){
 function onLoadAll(){
   mojeCookiespieniadze('pieniadze',5);
   mojeCookiesdarmowepln('darmoweplnczekanie',0);
+  mojeCookiesilosc('ilosc',0);
 
   ladowaniezmiennych();
 }
@@ -100,122 +123,10 @@ function przejscie(a){
     }
 
 
-
-
-// COINFLIP FUNKCJE
-  function obstawiam(a){
-    obstawienie = a;
-    konsola("Obstawiłeś: " + obstawienie + ".");
-    if(a == "jx"){
-      poID("jx").style = "background-color:red";
-      poID("kx").style = "background-color:#e8e8e8";
-      obstawienie = 0;
-    }
-    else { //jeżeli to KX ofc.
-      poID("kx").style = "background-color:red";
-      poID("jx").style = "background-color:#e8e8e8";
-      obstawienie = 1;
-    }
-  }
-  function zmianastawki(a){
-    teststawka = stawka + a;
-    if(teststawka > player.money){
-      konsola("Nie masz wystarczająco pieniędzy, żeby obstawić: " + teststawka + "$");
-      teststawka = stawka;
-      zmianastawkiall()
-      return;
-    }
-    else  {
-      stawka += a;
-      teststawka = stawka;
-      konsola("Obstawiles: " + stawka + "$");
-      poID('pstawka').innerHTML = stawka + "$";}
-    }
-  function zmianastawkiall(){
-    stawka = player.money;
-    konsola("Obstawiles wszystkie swoje pieniadze czyli: " + stawka + "$");
-    poID('pstawka').innerHTML = stawka + "$";
-    return;
-  }
-  function resetstawki(){
-    stawka = 0;
-    teststawka = 0;
-    poID('pstawka').innerHTML = stawka + "$";
-    konsola('Stawka została zresetowana!');
-    }
-  function zmianastawkix2(){
-    teststawka = stawka * 2;
-    if(teststawka > player.money){
-      konsola("Nie masz wystarczająco pieniędzy, żeby obstawić: " + teststawka + "$");
-      teststawka = stawka;
-      return;
-    }
-    else  {
-      stawka *= 2;
-      teststawka = stawka;
-      konsola("Obstawiles: " + stawka + "$");
-      poID('pstawka').innerHTML = stawka + "$";}
-    }
-  function zmianastawkiy2(){
-    teststawka = stawka / 2;
-    if(teststawka > player.money){
-      konsola("Nie masz wystarczająco pieniędzy, żeby obstawić: " + teststawka + "$");
-      teststawka = stawka;
-      return;
-    }
-    else  {
-      stawka /= 2;
-      teststawka = stawka;
-      konsola("Obstawiles: " + stawka + "$");
-      poID('pstawka').innerHTML = stawka + "$";}
-    }
-  function zmianastawkirandom(){
-    stawka = (Math.floor(Math.random()*player.money+1));
-    if(stawka > player.money){
-      stawka -= 1;
-      konsola('Nie mozesz ustawic losowej kwoty!');
-      return;
-    }
-    poID('pstawka').innerHTML = stawka + "$";
-    konsola('Ustawiles losową stawkę tzn: ' + stawka + "$");
-    teststawka = 0;
-  }
-  function cfgraj(){
-    if(obstawienie == null || stawka == 0){
-      konsola('Musisz ustawić swój typ oraz stawkę!');
-      return;
-    }
-    obstawieniekomputer = (Math.floor(Math.random()*2));
-    if(obstawieniekomputer == 1){
-      poID('obstawienie').innerHTML = "kx";}
-    else{
-      poID('obstawienie').innerHTML = "jx";}
-    if(obstawieniekomputer == obstawienie){
-      konsola('Wygrales!');
-      poID('obstawienie').style = "color: green";
-      player.money += stawka;
-    }
-    if(obstawieniekomputer !== obstawienie){
-      konsola("Przegrales!");
-      poID('obstawienie').style = "color: red";
-      player.money -= stawka;
-    }
-    poID('pln').innerHTML = player.money + "$";
-    konsola("Aktualny stan konta: " + player.money + "$");
-  // zeby  na minus nie bylo
-    if(stawka > player.money){
-      stawka = player.money;
-      poID('pstawka').innerHTML = stawka + "$";
-      return;
-        player.money = parseInt(Cookies.get('pieniadze'));
-    }
-  }
-
-
-
 function mojeCookieszapis(){
   Cookies.set('pieniadze',player.money, { expires: 365 });
   Cookies.set('darmoweplnczekanie',ileczekac, { expires: 365 });
+  Cookies.set('ilosc',ilosc, { expires: 365 });
   konsola('Cookies zostały automatycznie zapisane!');
 }
 
@@ -235,3 +146,75 @@ function getCookie(cname) {
   }
   return "";
 } //sprawdzanie czy jest cookie
+
+function rynek(){
+  cenaczesczmienna = 2;
+  poID('itemcena').innerHTML = cena + "$";
+  poID('iloscprzedm').innerHTML = ilosc;
+}
+function kup(){
+  if(player.money < cena){
+    konsola('Nie masz wystarczająco pieniędzy!');
+    return;}
+  else{
+    player.money -= cena;
+    ilosc += 1;
+    poID('pln').innerHTML = player.money + "$";
+    poID('iloscprzedm').innerHTML = ilosc;
+    rynek();
+  }
+}
+function sprzedaj(){
+  if(ilosc <= 0){
+    konsola('Nie masz tego przedmiotu!');
+    return;}
+  else{
+    ilosc -= 1;
+    player.money += cena;
+    poID('pln').innerHTML = player.money + "$";
+    poID('iloscprzedm').innerHTML = ilosc;
+    rynek();
+  }
+}
+function zmianaceny(){
+  czy = Math.floor(Math.random()*2+1);
+if(czy == 1 && cena == 0){
+  i++;
+  if(i == 3){
+    cena = 10;
+    i = 0;
+  }
+  return;
+}
+  if(czy == 1){
+    cena -= cenaczesczmienna;}
+  if(czy == 2){
+    cena += cenaczesczmienna;}
+
+  poID('itemcena').innerHTML = cena + "$";
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
