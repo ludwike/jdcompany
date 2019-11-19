@@ -149,3 +149,31 @@ background-color: #e8e8e8;}
 }
 #ustawienia{
 }
+span#zlywidok{
+  display: none;
+}
+@media (min-width: 800px),(orientation: landscape){
+  * {
+    display: none;
+  }
+html,body,#gornyblok{
+  display: block;
+  background-color: orange;
+}
+#glowny{
+  border-bottom: 1px solid black;
+  display: flex;
+  font-size: 45px;
+  justify-content: center;
+  align-items: center;
+}
+span#zlywidok{
+  justify-content: center;
+  align-items: center;
+  background-color: lightgrey;
+  width: 75vw;
+  height: 50vh;
+  display: flex;
+  text-align: center;
+  border: 5px solid red;
+}
