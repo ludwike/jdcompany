@@ -29,7 +29,7 @@ var coinflipvar = {
 var player = {
   id: 1,
   nick: "Ludwike",
-  money: 0,}
+  money: 1,}
 
 setInterval("aktualizacjazmiennych();",1000);
 setInterval("czekanie();",1000); //darmowe pln
