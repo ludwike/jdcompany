@@ -1,6 +1,6 @@
 var idznow = "glowny";
 var idzdo = null;
-
+// npcy handel
 var mojadata = {
   date: null,
   sekundy: 0,
@@ -14,7 +14,7 @@ var darmowepieniadze = {
   ileczekac: 0,
 }
 var przedmioty = {
-  cena: 10,
+  cena: 25,
   iloscp: 0,
   czy: null,
   i: null,
@@ -65,7 +65,7 @@ function onLoadAll(){
   mojeCookiesCheck('pieniadze',0,'player','money');
   mojeCookiesCheck('iloscp',0,'przedmioty','iloscp');
   mojeCookiesCheck('PLN15datawsekundach',0,'mojadata','darmoweplnsekundy');
-  plnpozostalyczas();
+
 //  mojeCookiesCheck('datawsekundach',0,'przedmioty','iloscp');
 
 }
@@ -78,11 +78,7 @@ function aktualizacjazmiennych(){
 }
 
 // PODSTAWOWE FUNKCJE PODSTAWOWE FUNKCJE ///
-function plnpozostalyczas(){
-  if(mojadata.darmoweplnsekundy != 0){
-    darmowepieniadze.ileczekac = mojadata.sekundy + darmowepieniadze.ileczekac - mojadata.darmoweplnsekundy;
-  }
-}
+
 function przejscie(a){
   poID(idznow).style.display = "none";
   idznow = a;
@@ -107,7 +103,6 @@ else {
 // KOLEJNE FUNKCJE
 function darmowepln(){
   if(darmowepieniadze.ileczekac <= 0){
-    mojadata.darmoweplnsekundy = mojadata.sekundy;
     var darmowyhajs = 15;
     player.money += darmowyhajs;
     darmowepieniadze.ileczekac = 30;

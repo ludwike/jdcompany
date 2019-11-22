@@ -1,5 +1,5 @@
 function rynek(){
-  przedmioty.cenaczesczmienna = 2;
+  przedmioty.cenaczesczmienna = 3;
   poID('itemcena').innerHTML = przedmioty.cena + "$";
   poID('iloscprzedm').innerHTML = przedmioty.iloscp;
 }
@@ -35,7 +35,7 @@ function zmianaceny(){
   if(przedmioty.czy == 1 && przedmioty.cena == 0){
     przedmioty.i++;
     if(przedmioty.i == 3){
-      przedmioty.cena = 10;
+      przedmioty.cena = 25;
       przedmioty.i = 0;
     }
     return;
@@ -43,6 +43,9 @@ function zmianaceny(){
     if(przedmioty.czy == 1){
       przedmioty.cena -= przedmioty.cenaczesczmienna;}
     if(przedmioty.czy == 2){
-      przedmioty.cena += przedmioty.cenaczesczmienna;}
+        przedmioty.cena += przedmioty.cenaczesczmienna;}
+    if(przedmioty.cena < -1){
+      przedmioty.cena = 0;
+    }
 poID('itemcena').innerHTML = przedmioty.cena + "$";
 }
