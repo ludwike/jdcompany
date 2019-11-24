@@ -5,7 +5,8 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 11px;}
+  font-size: 11px;
+  width: 100%;}
 
 header {
   height: 100vh;
@@ -15,10 +16,21 @@ header {
   font-family: 'Oswald';
   border-bottom: 3px solid black;}
 
-main {
+main#one {
   height: 100vh;
-  background-color: #B803FF;}
-
+/* background-color: #B803FF; */
+  background-image: linear-gradient(to bottom right, #c326ff, #c121ff, #bd14ff, #bb0aff, #B803FF, #ac00f0, #a400e3);
+  border-bottom: 3px solid black;
+}
+main#two {
+  height: 100vh;
+  background-color: pink;
+  border-bottom: 3px solid black;
+}
+main#foot {
+  height: 20vh;
+  background-color: #fcba03;
+}
 a,a:hover,a:visited,a:link,a:focus {
   color: black;}
 
@@ -49,7 +61,7 @@ header h3 {
   font-size: 2.8rem;
   font-weight: 400;}
 
-#arrow {
+#arrowA {
   width: 40px;
   height: 40px;
   border: 3px solid black;
@@ -64,22 +76,232 @@ header h3 {
   animation: strzalka 2s infinite;
 }
 
+#arrowB {
+  width: 40px;
+  height: 40px;
+  border: 3px solid black;
+  position: absolute;
+  left: 50%;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  text-align: center;
+  background-color: rgba(194, 0, 224,0.5);
+  animation: strzalka 2s infinite;
+}
+
 @keyframes strzalka {
   0% {bottom: 10.8%}
   50% {bottom: 9.5%}
   100% {bottom: 10.8%}}
 
+#one{
+  position: relative;
+  display: flex;
+
+}
+#one ul {
+margin: 0 auto 0 auto;
+}
+
+#one li {
+  display: inline-block;
+  font-family: 'Monda';
+  font-size: 3.75rem;
+  font-weight: bold;
+  text-shadow: 0 0 30px rgba(0,0,0,0.3), 0 0 10px purple, 3px 12px 5px #a200e0;
+}
+#one span.a li:nth-child(3){
+  transform: rotate(15deg) translateY(4px);
+  animation: miganie 2s infinite;
+}
+
+#one span.b li:nth-child(6){
+  animation: krecenie 1.75s infinite linear;
+  text-shadow: 0 0 30px rgba(0,0,0,0.3), 0 0 10px purple;
+}
+#one span.a li:nth-child(8){
+  animation: opadanie 2s infinite linear;
+  position: relative;
+}
+#one span.b li:nth-child(1){
+  animation: odwrocenie 4s infinite;
+}
+#one span.a li:nth-child(1){
+  animation: wielkosc 5s infinite;
+}
+#one span.b li:nth-child(9){
+  animation: cien 6s infinite linear;
+}
+.d {
+  display: flex;
+  width: 100vw;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  align-items: center;
+  justify-content: center;
+}
+#one img.um {
+  position: relative;
+  height: 64px;
+}
+
+@keyframes cien{
+0%{text-shadow: 0 0 30px rgba(0,0,0,0.3), 0 0 10px purple, 3px 12px 5px #a200e0;}
+25%{text-shadow: 0 0 30px rgba(0,0,0,0.3), 0 0 10px purple, 30px 12px 5px #8400b5}
+50%{text-shadow: 0 0 30px rgba(0,0,0,0.3), 0 0 10px purple, 30px -27px 5px #8400b5}
+75%{text-shadow: 0 0 30px rgba(0,0,0,0.3), 0 0 10px purple, 3px -27px 5px #8400b5}
+100%{text-shadow: 0 0 30px rgba(0,0,0,0.3), 0 0 10px purple, 3px 12px 5px #a200e0;}
+}
+@keyframes wielkosc{
+0%{font-weight: bold}
+90%{font-weight: bold}
+100%{font-weight: normal}
+
+
+}
+@keyframes odwrocenie {
+0%{}
+50%{transform:rotateY(180deg);}
+100%{}
+}
+
+@keyframes opadanie{
+0%{top: 0%;}
+50%{top: 2%;}
+100%{top: 0%;}
+}
+
+@keyframes miganie {
+     0% {
+       opacity: 0;
+     }
+     5% {
+       opacity: 1;
+     }
+     20% {
+       opacity: 1;
+     }
+     25% {
+       opacity: 0.5;
+     }
+     30% {
+       opacity: 0.5
+     }
+     32% {
+       opacity: 1;
+     }
+     45% {
+       opacity: 1;
+     }
+     46% {
+       opacity: 0.5;
+     }
+     54% {
+       opacity: 0.5;
+     }
+     55% {
+       opacity: 1;
+     }
+     77% {
+       opacity: 1;
+     }
+     78% {
+       opacity: 0;
+     }
+     88% {
+       opacity: 0;
+     }
+     90% {
+       opacity: 1
+     }
+     93% {
+       opacity: 1
+     }
+     95% {
+       opacity: 0
+     }
+     97% {
+       opacity: 0
+     }
+     98% {
+       opacity: 1
+     }
+     100% {
+       opacity: 0;
+     }
+   }
+
+@keyframes krecenie {
+0%{transform: rotate(0deg)}
+10%{transform: rotate(36deg)}
+50%{transform: rotate(180deg)}
+90%{transform: rotate(324deg)}
+100%{transform: rotate(360deg)}
+}
+
+
+
+
+/* RESPONSYWNOŚĆ!!! RESPONSYWNOŚĆ!!! RESPONSYWNOŚĆ!!! */
 @media (orientation: portrait) { /* tekst do drugiej linii */
-  hgroup h3 span::after {
+  hgroup h3 span::after) {
     content: '\A';
     white-space: pre;}}
 
 @media (orientation: landscape) {
   header img {
     height: 60%;
-    right: 5%;}}
+    right: 5%;}
+    hgroup h3 span::after {
+      content: '\A';
+      white-space: pre;}}
 
-@media (min-width: 100px) and (max-width: 330px) { /* nokia lumia  xD */
+@media (orientation: portrait){
+  #one ul span::after{
+    content: '\A';
+    white-space: pre;
+  }
+}
+
+
+
+
+/* RESPONSYWNOŚĆ!!! RESPONSYWNOŚĆ!!! RESPONSYWNOŚĆ!!! */
+/* RESPONSYWNOŚĆ!!! RESPONSYWNOŚĆ!!! RESPONSYWNOŚĆ!!! */
+/* RESPONSYWNOŚĆ!!! RESPONSYWNOŚĆ!!! RESPONSYWNOŚĆ!!! */
+@media (min-width: 331px) and (max-width: 365px) and (orientation: portrait) { /* samsung  galaxy s5 */
+  header h1 {
+    font-size: 3.9rem;}
+
+  header h3 {
+    font-size: 2.8rem;}
+
+  header img{
+    height: 60%;
+    right: -23%;}}
+
+@media (min-width: 620px) and (min-width: 620px) and (orientation: landscape){
+  header h1 {
+    font-size: 5.6rem;}
+
+  header h3 {
+    font-size: 2.8rem;}
+
+  header img{
+    height: 55%;
+    right: -13%;}
+}
+
+
+
+
+
+
+
+@media (min-width: 100px) and (max-width: 330px) and (orientation: portrait) { /* nokia lumia  xD */
   header hgroup {
     left: 6%;}
 
@@ -92,18 +314,7 @@ header h3 {
   header hgroup {
     transform: rotate(-0.5deg);}}
 
-@media (min-width: 331px) and (max-width: 365px) { /* samsung  galaxy s5 */
-  header h1 {
-    font-size: 3.9rem;}
-
-  header h3 {
-    font-size: 2.8rem;}
-
-  header img{
-    height: 60%;
-    right: -23  %;}}
-
-@media (min-width: 366px) and (max-width: 550px) { /* iphone X */
+@media (min-width: 366px) and (max-width: 550px) and (orientation: portrait) { /* iphone X */
   header h1 {
     font-size: 4rem;}
 
@@ -114,7 +325,7 @@ header h3 {
     height: 53%;
     right: -32%;}}
 
-@media (min-width: 551px) and (max-width: 850px) { /* ipad */
+@media (min-width: 551px) and (max-width: 850px) and (orientation: portrait) { /* ipad */
   header h1{
     font-size: 7.5rem;}
 

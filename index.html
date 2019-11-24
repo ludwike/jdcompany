@@ -9,18 +9,14 @@
 <script type="text/javascript" src="others/bgrandom.js"></script>
 </head>
 <body id="b1" onMouseMove="tlo()">
-<h1>Hello!</h1>
+<h1 onclick="document.getElementById('s1').innerHTML = document.getElementById('s2porzucone').innerHTML;">Hello!</h1>
 <p class="a">Available catalogs:</p>
 <section id="s1"> <!-- s1 to lista odnosikow tylko -->
 <div>
-<a href="#" onclick="document.getElementById('s1').innerHTML = document.getElementById('s2stare').innerHTML;">files <i>like</i> notes</a><br>
 <a class="respo" href="https://ludwike.github.io/jdcompany/webpages/leagueoflegends/lol.html">league of legends</a><br>
 <a href="https://ludwike.github.io/jdcompany/webpages/ankietadawids/ankietadawids.html">form</a><br>
-<a href="https://ludwike.github.io/jdcompany/webpages/animations/rozowykwadrat.html">box of animations</a><br>
 <a class="respo" href="https://ludwike.github.io/jdcompany/webpages/portfolio/portfolio.html">portfolio - <i>beta</i></a><br>
-<a href="https://ludwike.github.io/jdcompany/webpages/lepszyindex/nowyindex.html">new index  (<i>abandoned</i>)</a><br>
-<a href="https://ludwike.github.io/jdcompany/webpages/colorpicker/picker.html">colorpicker</a><br>
-<a class="respo" href="https://ludwike.github.io/jdcompany/webpages/memory/memory.html">memory (<i>without php and sql</i>)</a><br>
+<a class="respo" href="https://ludwike.github.io/jdcompany/webpages/memory/memory.html">memory <br>(<i>without php and sql</i>)</a><br>
 <a href="https://ludwike.github.io/jdcompany/webpages/e14/index.html">e14 (<i>site+js</i>)</a><br>
 <a class="respo" href="https://ludwike.github.io/jdcompany/webpages/jsgame/jsgame.html">jsgame! poggers!</a><br>
 
@@ -28,13 +24,17 @@
 </section>
 
 <section id="s2stare">
-  <a href="https://ludwike.github.io/jdcompany/notes/binario/binario.txt">Binario.bat</a>
-  <a href="https://ludwike.github.io/jdcompany/notes/binario/binario.bat">download</a><br>
-  <a href="https://ludwike.github.io/jdcompany/notes/coinflip/coinflip.txt">Coinflip.bat</a>
-  <a href="https://ludwike.github.io/jdcompany/notes/coinflip/coinflip.bat">download</a><br>
+  <a href="#">Abandoned projects:</a><br>
+  <a href="https://ludwike.github.io/jdcompany/notes/binario/binario.txt">Binario.bat</a><br>
+  <a href="https://ludwike.github.io/jdcompany/notes/coinflip/coinflip.txt">Coinflip.bat</a><br>
   <a href="https://ludwike.github.io/jdcompany/notes/powtorzeniejavascript.txt">Podstawy_i_tworzenie_obiektów.js</a><br>
   <a href="https://ludwike.github.io/jdcompany/notes/form1.txt">Formularze_1.js</a>
-
+</section>
+<section id="s2porzucone">
+<a href="#" onclick="document.getElementById('s1').innerHTML = document.getElementById('s2stare').innerHTML;">files <i>like</i> notes</a><br>
+<a href="https://ludwike.github.io/jdcompany/webpages/animations/rozowykwadrat.html">box of animations</a><br>
+<a href="https://ludwike.github.io/jdcompany/webpages/lepszyindex/nowyindex.html">new index</a><br>
+<a href="https://ludwike.github.io/jdcompany/webpages/colorpicker/picker.html">colorpicker</a><br>
 </section>
 
 <footer>
