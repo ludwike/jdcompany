@@ -5,8 +5,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 11px;
-  width: 100%;}
+  font-size: 11px;}
 
 header {
   height: 100vh;
@@ -19,7 +18,7 @@ header {
 main#one {
   height: 100vh;
 /* background-color: #B803FF; */
-  background-image: linear-gradient(to bottom right, #c326ff, #c121ff, #bd14ff, #bb0aff, #B803FF, #ac00f0, #a400e3);
+  background: linear-gradient(to bottom right, #c326ff, #c121ff, #bd14ff, #bb0aff, #B803FF, #ac00f0, #a400e3);
   border-bottom: 3px solid black;
 }
 main#two {
@@ -84,7 +83,7 @@ header h3 {
   left: 50%;
   border-radius: 50%;
   transform: translateX(-50%);
-  font-size: 2rem;
+  font-size: 2.3rem;
   text-align: center;
   background-color: rgba(194, 0, 224,0.5);
   animation: strzalka 2s infinite;
@@ -96,6 +95,7 @@ header h3 {
   100% {bottom: 10.8%}}
 
 #one{
+  overflow-x: hidden;
   position: relative;
   display: flex;
 
@@ -131,7 +131,7 @@ margin: 0 auto 0 auto;
   animation: wielkosc 5s infinite;
 }
 #one span.b li:nth-child(9){
-  animation: cien 6s infinite linear;
+  animation: cien 6 s infinite linear;
 }
 .d {
   display: flex;
