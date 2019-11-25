@@ -83,12 +83,18 @@ header h3 {
   left: 50%;
   border-radius: 50%;
   transform: translateX(-50%);
-  font-size: 2.3rem;
+  font-size: 2rem;
   text-align: center;
   background-color: rgba(194, 0, 224,0.5);
   animation: strzalka 2s infinite;
+    display: flex;
 }
-
+#one i {
+  position: relative;
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%,-50%);
+}
 @keyframes strzalka {
   0% {bottom: 10.8%}
   50% {bottom: 9.5%}
@@ -131,7 +137,7 @@ margin: 0 auto 0 auto;
   animation: wielkosc 5s infinite;
 }
 #one span.b li:nth-child(9){
-  animation: cien 6 s infinite linear;
+  animation: cien 6s infinite linear;
 }
 .d {
   display: flex;
@@ -247,7 +253,7 @@ margin: 0 auto 0 auto;
 
 /* RESPONSYWNOŚĆ!!! RESPONSYWNOŚĆ!!! RESPONSYWNOŚĆ!!! */
 @media (orientation: portrait) { /* tekst do drugiej linii */
-  hgroup h3 span::after) {
+  hgroup h3 span::after {
     content: '\A';
     white-space: pre;}}
 
@@ -259,7 +265,7 @@ margin: 0 auto 0 auto;
       content: '\A';
       white-space: pre;}}
 
-@media (orientation: portrait){
+@media (orientation: landscape),(orientation: portrait){
   #one ul span::after{
     content: '\A';
     white-space: pre;
