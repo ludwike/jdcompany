@@ -8,6 +8,9 @@ body {
   background-color: black;
   color: white;
 }
+i {
+  font-size: 60%;
+}
 h1 {
   font-size: 250%;
 }
