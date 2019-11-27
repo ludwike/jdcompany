@@ -1,0 +1,3 @@
+Zapytanie 1: SELECT `id`,`marka`,`model` FROM `Samochody`;
+Zapytanie 2: SELECT `Samochody_id`,`Klient` FROM `Zamowienia`;
+Zapytanie 3: SELECT * FROM `Samochody` where marka='Fiat';
