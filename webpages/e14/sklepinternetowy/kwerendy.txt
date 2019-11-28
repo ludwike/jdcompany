@@ -1,0 +1,4 @@
+zapytanie 1: SELECT `nazwa` FROM `towary` WHERE promocja=1;
+zapytanie 2: SELECT `cena` FROM `towary` where nazwa='Cienkopis';
+zapytanie 3idk: SELECT dostawcy.nazwa, COUNT(towary.nazwa) FROM dostawcy INNER JOIN towary ON dostawcy.id=towary.idDostawcy GROUP BY dostawcy.nazwa
+zapytani 4: ALTER TABLE `dostawcy` ADD `e_mail` text;
