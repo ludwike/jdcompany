@@ -10,7 +10,7 @@
 	<h3>Promocja 15% obejmuje artykuły:</h3>
 	<ul>
 	<?php
-$polaczenia_baza = mysqli_connect("localhost","root","","sklep");
+$polaczenia_baza = mysqli_connect("localhost","ludwike_admin","jebacdisA1337#","ludwike_e14sklepinternetowy");
 $wynik = mysqli_query($polaczenia_baza, "SELECT `nazwa` FROM `towary` WHERE promocja=1;");
 if($wynik){
 	while($rekord=$wynik->fetch_assoc()){
@@ -26,7 +26,7 @@ mysqli_close($polaczenia_baza);
 
 <form action="index.php" method="post">
 	<select name="Nazwa">
-		<option>Gumka do mazania</option>
+		<option>Gumka dxDo mazania</option>
 		<option>Cienkopis</option>
 		<option>Pisaki 60 szt.</option>
 		<option>Markery 4 szt.</option>
@@ -37,7 +37,7 @@ mysqli_close($polaczenia_baza);
 if (isset($_POST['przycisk'])){
 $promocja = 0.85;
 $zmiennataka = $_POST['Nazwa'];
-$polaczenia_baza = mysqli_connect("localhost","root","","sklep");
+$polaczenia_baza = mysqli_connect("localhost","ludwike_admin","jebacdisA1337#","ludwike_e14sklepinternetowy");
 $wynik = mysqli_query($polaczenia_baza, "SELECT `cena` FROM `towary` where nazwa='$zmiennataka';");
 echo $_POST['Nazwa'];
 if($wynik){
